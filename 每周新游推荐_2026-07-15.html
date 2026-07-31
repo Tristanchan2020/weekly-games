@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周新游推荐 — 2026年7月第3周</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Microsoft YaHei", "PingFang SC", sans-serif; background: #0f0f1a; color: #e0e0e0; line-height: 1.7; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  /* Header */
+  .header { text-align: center; padding: 50px 20px 30px; background: linear-gradient(135deg, #1a1a35 0%, #0d0d20 100%); border-bottom: 2px solid #333; }
+  .header h1 { font-size: 2.4em; background: linear-gradient(135deg, #ff6b6b, #ffd93d); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .header .date { color: #888; font-size: 1.05em; margin-top: 8px; }
+  .header .subtitle { color: #666; font-size: 0.9em; margin-top: 4px; }
+
+  /* Section */
+  .section { margin: 35px 0; }
+  .section-title { font-size: 1.6em; padding: 10px 0; margin-bottom: 20px; border-bottom: 3px solid; display: inline-block; }
+  .section-title.pc  { color: #4fc3f7; border-color: #4fc3f7; }
+  .section-title.mobile { color: #ff8a65; border-color: #ff8a65; }
+
+  /* Game Card */
+  .game-card { background: #1a1a30; border-radius: 12px; padding: 20px 24px; margin: 16px 0; border-left: 4px solid #333; transition: all 0.2s; }
+  .game-card:hover { transform: translateX(4px); box-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+  .game-card.released { border-left-color: #4caf50; }
+  .game-card.upcoming { border-left-color: #ff9800; }
+
+  .game-header { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 12px; }
+  .game-name { font-size: 1.2em; font-weight: 700; color: #fff; }
+  .game-name a { color: #4fc3f7; text-decoration: none; }
+  .game-name a:hover { text-decoration: underline; }
+  .game-meta { font-size: 0.85em; color: #999; }
+  .game-desc { font-size: 0.92em; color: #bbb; margin: 8px 0; line-height: 1.7; }
+
+  /* Badges */
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+  .badge { padding: 3px 10px; border-radius: 20px; font-size: 0.78em; font-weight: 600; }
+  .badge-platform { background: #2a2a45; color: #aaa; }
+  .badge-date { background: #263238; color: #80cbc4; }
+  .badge-steam { background: #1b2838; color: #66c0f4; }
+  .badge-taptap { background: #1e2a3a; color: #4fc3f7; }
+
+  /* Indices */
+  .indices { display: flex; gap: 16px; flex-wrap: wrap; margin: 8px 0; }
+  .idx { padding: 6px 14px; border-radius: 8px; font-weight: 700; font-size: 0.88em; }
+  .idx-hot { background: linear-gradient(135deg, #ff4444, #ff6b35); color: #fff; }
+  .idx-rec { background: linear-gradient(135deg, #2196f3, #00bcd4); color: #fff; }
+  .idx-mc { background: linear-gradient(135deg, #ffd700, #ffab00); color: #111; }
+
+  /* Platforms */
+  .platforms { display: flex; gap: 6px; flex-wrap: wrap; }
+  .plat { font-size: 0.72em; padding: 2px 8px; border-radius: 4px; background: #252540; color: #999; }
+
+  /* Sub-section */
+  .sub-section { margin-top: 30px; }
+  .sub-title { font-size: 1.15em; color: #aaa; margin-bottom: 12px; padding-left: 10px; border-left: 3px solid #555; }
+
+  /* Links row */
+  .links-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
+  .link-btn { padding: 5px 12px; border-radius: 6px; font-size: 0.78em; text-decoration: none; font-weight: 600; transition: opacity 0.2s; }
+  .link-btn:hover { opacity: 0.8; }
+  .link-steam { background: #1b2838; color: #66c0f4; border: 1px solid #2a475e; }
+  .link-taptap { background: #1e2a3a; color: #4fc3f7; border: 1px solid #2a4a5e; }
+  .link-other { background: #2a2a40; color: #aaa; border: 1px solid #444; }
+
+  /* Legend */
+  .legend { background: #15152a; border-radius: 8px; padding: 16px 20px; margin: 24px 0; font-size: 0.82em; color: #888; }
+  .legend strong { color: #aaa; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 30px 0; color: #555; font-size: 0.8em; border-top: 1px solid #222; margin-top: 40px; }
+
+  /* Note */
+  .note { background: #1a1a28; border-left: 3px solid #ff6b6b; border-radius: 6px; padding: 12px 16px; margin: 16px 0; font-size: 0.85em; color: #aaa; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.6em; }
+    .game-header { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+  <h1>🎮 每周新游推荐</h1>
+  <div class="date">2026年7月13日 — 7月19日（第3周）</div>
+  <div class="subtitle">覆盖 PC · PS5 · Xbox Series X|S · Nintendo Switch / Switch 2 · 手游 | 数据截至7月15日</div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <strong>📊 指数说明：</strong>
+  <strong style="color:#ff6b35">热度指数</strong> — 基于全网关注度、愿望单/预约数、社交媒体讨论量综合评定（0-100）；
+  <strong style="color:#00bcd4">推荐指数</strong> — 仅限已上线游戏，综合 Steam 好评率 / Metacritic 媒体评分 / TapTap 评分及玩家口碑；
+  <strong style="color:#ffd700">Metacritic</strong> — 国际媒体综合评分（如有）。
+  <br><strong>⚠️ 标注：</strong>「下周及近期」指7月21日之后发售的游戏，部分尚未有最终评分，热度为预估值。
+</div>
+
+<!-- ============================== -->
+<!--  PC / 主机  -->
+<!-- ============================== -->
+<div class="section">
+  <div class="section-title pc">🖥️ PC / 主机端</div>
+
+  <!-- 本周已上线 -->
+  <div class="sub-section">
+    <div class="sub-title">📌 本周已上线（7/13–7/19）</div>
+
+    <!-- AC Black Flag -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/app/3751950/Assassins_Creed_Black_Flag_Resynced/" target="_blank" rel="noopener">🏴‍☠️ 刺客信条：黑旗 记忆重置</a>
+            <span style="font-size:0.78em;color:#aaa;">Assassin's Creed Black Flag Resynced</span>
+          </div>
+          <div class="game-meta">育碧 | 动作冒险 · 开放世界 · 海战 | ¥248</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 100</span>
+        <span class="idx idx-rec">⭐ 推荐 90</span>
+        <span class="idx idx-mc">📊 MC 84</span>
+      </div>
+      <div class="game-desc">
+        海盗神作《黑旗》完全重制。全新 Anvil 引擎，光追全局光照，战斗/潜行/海战全面现代化。首日销量 200 万份，Steam 同时在线峰值 10.4 万，创系列纪录。IGN 9 分，Steam 多半好评（78%），PS Store 4.79/5。新增专属剧情、船副与宠物系统，全程中文配音。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月9日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/app/3751950/Assassins_Creed_Black_Flag_Resynced/" target="_blank" rel="noopener">Steam 商店</a>
+        <a class="link-btn link-other" href="https://www.metacritic.com/game/assassins-creed-black-flag-resynced/" target="_blank" rel="noopener">Metacritic</a>
+      </div>
+    </div>
+
+    <!-- The Mound -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" target="_blank" rel="noopener">🐙 The Mound: Omen of Cthulhu</a>
+          </div>
+          <div class="game-meta">ACE Team / Nacon | 合作生存恐怖 · 克苏鲁 · 撤离 | $29.99</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 75</span>
+        <span class="idx idx-rec">⭐ 推荐 68</span>
+      </div>
+      <div class="game-desc">
+        克苏鲁题材合作撤离游戏，1-4 人组队深入被诅咒的丛林搜寻宝藏。氛围与音效设计出色，理智值系统让队友也可能变成敌人。但节奏偏慢、战斗略显僵硬，独狼体验较差。Metro/GameReactor 等媒体评分为 6-7/10 区间。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月15日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/app/2569760/The_Mound_Omen_of_Cthulhu/" target="_blank" rel="noopener">Steam 商店</a>
+      </div>
+    </div>
+
+    <!-- Denshattack! -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/app/2524850/Denshattack/" target="_blank" rel="noopener">🚄 Denshattack!</a>
+          </div>
+          <div class="game-meta">Undercoders / Fireshine Games | 动作 · 特技 · 街机</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 70</span>
+        <span class="idx idx-rec">⭐ 推荐 75</span>
+      </div>
+      <div class="game-desc">
+        驾驶火车做花式特技的疯狂街机游戏——"火车模拟器 × 托尼·霍克滑板"。在日本赛博都市中翻腾、漂移、竞速。Demo 获 97% 好评，Steam 愿望单超 25 万。画风鲜艳，玩法脑洞大开，支持多平台。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月15日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/app/2524850/Denshattack/" target="_blank" rel="noopener">Steam 商店</a>
+      </div>
+    </div>
+
+    <!-- Ratatan -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/app/2949320/Ratatan/" target="_blank" rel="noopener">🥁 Ratatan（啦嗒铛）</a>
+          </div>
+          <div class="game-meta">Ratata Arts / Game Source Entertainment | 节奏 · Roguelike · 合作 | $24.99</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 78</span>
+        <span class="idx idx-rec">⭐ 推荐 82</span>
+      </div>
+      <div class="game-desc">
+        《啪嗒砰》精神续作正式版上线（结束 EA），由原作制作人小谷浩之打造。节奏指令 × Roguelike × 百人大乱斗，支持 4 人在线合作。EA 阶段已积累大量好评，完整版新增 Switch 2/PS5/Xbox 主机版。Demo 超 27 万下载。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月16日（正式版）</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/app/2949320/Ratatan/" target="_blank" rel="noopener">Steam 商店</a>
+      </div>
+    </div>
+
+    <!-- Moss -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/app/3914860/Moss_The_Forgotten_Relic/" target="_blank" rel="noopener">🐭 Moss: The Forgotten Relic</a>
+          </div>
+          <div class="game-meta">Polyarc / Blackbird Interactive | 解谜冒险 · 平台 · 童话 | $19.99</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 62</span>
+        <span class="idx idx-rec">⭐ 推荐 85</span>
+      </div>
+      <div class="game-desc">
+        知名 VR 游戏《Moss》1+2 合集重制，首次无需 VR 设备即可游玩。小老鼠 Quill 的童话冒险，精致如翻书般的关卡设计。Demo 90% 好评，Steam 愿望单超 10 万。原作两作 Metacritic 均在 80+，品质有保障。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月16日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+        <span class="badge badge-platform">Switch</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/app/3914860/Moss_The_Forgotten_Relic/" target="_blank" rel="noopener">Steam 商店</a>
+      </div>
+    </div>
+
+    <!-- Cozy Grove -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Cozy+Grove+Camp+Spirit" target="_blank" rel="noopener">🏕️ Cozy Grove: Camp Spirit</a>
+          </div>
+          <div class="game-meta">Spry Fox / Netflix | 生活模拟 · 休闲 · 治愈</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 52</span>
+        <span class="idx idx-rec">⭐ 推荐 72</span>
+      </div>
+      <div class="game-desc">
+        暖心生活模拟游戏，扮演灵魂童子军帮助可爱的幽灵熊。原 Netflix 手游移植 PC/主机，在荒岛上装饰营地、完成任务、治愈幽灵心灵。节奏舒缓，画风温暖，适合放松减压。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月15日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Cozy+Grove+Camp+Spirit" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <!-- Fogpiercer -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Fogpiercer" target="_blank" rel="noopener">🚂 Fogpiercer（雾境列车）</a>
+          </div>
+          <div class="game-meta">Mad Cookies Studio / Hooded Horse | 策略 · 卡牌肉鸽 · 科幻</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 58</span>
+      </div>
+      <div class="game-desc">
+        科幻卡牌 Roguelike，Hooded Horse 发行（《庄园领主》发行商）。在末日浓雾中建造火车、搭配车厢卡组、回合制战斗。机车/车厢/乘员三位一体的卡牌构筑系统，策略深度不错。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月17日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">Mac</span>
+        <span class="badge badge-platform">Linux</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Fogpiercer" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <!-- Heave Ho 2 -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Heave+Ho+2" target="_blank" rel="noopener">🤝 Heave Ho 2</a>
+          </div>
+          <div class="game-meta">Le Cartel / Devolver Digital | 物理 · 合作 · 派对</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 50</span>
+      </div>
+      <div class="game-desc">
+        沙雕物理合作游戏续作！抓住朋友（或把他们甩下悬崖），齐心协力荡过危险关卡。新增在线联机，不再局限于本地沙发同乐。纯粹的派对欢乐制造机。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月16日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">Switch</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Heave+Ho+2" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <!-- Kyoto Xanadu -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Kyoto+Xanadu" target="_blank" rel="noopener">🏯 东京幻都（Kyoto Xanadu）</a>
+          </div>
+          <div class="game-meta">Falcom | 动作 JRPG · 校园 · 异世界</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 55</span>
+      </div>
+      <div class="game-desc">
+        Falcom 经典 ARPG 高清移植版。舞台为大化改新后京都成为日本首都的另一条时间线，白天校园生活 + 夜间异界战斗的双重玩法，支持中文。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月16日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Kyoto+Xanadu" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <!-- Dead Weight -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Dead+Weight" target="_blank" rel="noopener">⚔️ Dead Weight</a>
+          </div>
+          <div class="game-meta">Klukva Games | 策略 RPG · 回合制 · 独立</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 42</span>
+      </div>
+      <div class="game-desc">
+        独立策略 RPG，回合制战术战斗结合角色养成，画风偏暗黑。小团队作品，定位硬核策略玩家群体。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月16日</span>
+        <span class="badge badge-platform">PC</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Dead+Weight" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 下周及近期 -->
+  <div class="sub-section">
+    <div class="sub-title">📅 下周及近期即将上线</div>
+
+    <!-- Splatoon Raiders -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.nintendo.com/jp/switch/ab65a/index.html" target="_blank" rel="noopener">🦑 Splatoon Raiders（斯普拉遁：涂击队）</a>
+          </div>
+          <div class="game-meta">任天堂 | 动作射击 · 合作副本 · 刷刷刷 | Switch 2 独占 | $49.99</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 95</span>
+      </div>
+      <div class="game-desc">
+        Splatoon 系列首款 PVE 外传，Switch 2 独占。主打单人冒险+4 人联机共斗，100+ 武器变体、深度自定义配装。Deep Cut 偶像三人组全程陪伴，探索涡潮群岛、搜集宝藏、升级基地。媒体预览普遍好评，被称为"任天堂的 Borderlands"。预计 7 月 23 日发售。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月23日</span>
+        <span class="badge badge-platform">Switch 2 独占</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-other" href="https://www.nintendo.com/jp/switch/ab65a/index.html" target="_blank" rel="noopener">任天堂官方页面</a>
+      </div>
+    </div>
+
+    <!-- Halo Campaign Evolved -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Halo+Campaign+Evolved" target="_blank" rel="noopener">🔫 光环：战役进化（Halo: Campaign Evolved）</a>
+          </div>
+          <div class="game-meta">343 Industries / Xbox Game Studios | FPS · 重制 · 科幻 | $41.99</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 90</span>
+      </div>
+      <div class="game-desc">
+        《光环：战斗进化》完全重制！虚幻引擎 5 重塑画质与动画，追加三段全新序章任务、扩充武器载具与敌人种类。史上首次登陆 PS5 平台。系列粉丝和 FPS 爱好者必关注。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月28日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Halo+Campaign+Evolved" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <!-- Avatar Legends -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Avatar+Legends+Fighting+Game" target="_blank" rel="noopener">🔥 Avatar Legends: The Fighting Game</a>
+          </div>
+          <div class="game-meta">Gameplay Group International | 格斗 · 2D · 动漫改编 | $14.14</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 68</span>
+      </div>
+      <div class="game-desc">
+        《降世神通》改编 2D 格斗游戏，12 名经典角色参战。支持跨平台联机与回滚网络代码，御术战斗系统强调流畅连招。自带故事模式，系列粉丝和格斗玩家都值得关注。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月23日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">PS4</span>
+        <span class="badge badge-platform">XSX|S</span>
+        <span class="badge badge-platform">Switch</span>
+        <span class="badge badge-platform">Switch 2</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Avatar+Legends+Fighting+Game" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <!-- Mistfall Hunter -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://store.steampowered.com/search/?term=Mistfall+Hunter" target="_blank" rel="noopener">🌫️ Mistfall Hunter（雾影猎人）</a>
+          </div>
+          <div class="game-meta"> | PvPvE · 动作 · 撤离</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 65</span>
+      </div>
+      <div class="game-desc">
+        PvPvE 撤离型动作游戏，玩家在迷雾笼罩的战场上打怪、搜刮、对决其他玩家后撤离。暗黑奇幻画风，战斗偏硬核。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月29日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Mistfall+Hunter" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 下半年最受期待 -->
+  <div class="sub-section">
+    <div class="sub-title">🌟 下半年最受期待大作 TOP 10</div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">🥇 GTA VI（侠盗猎车手 6）</div>
+          <div class="game-meta">Rockstar Games | 开放世界 · 犯罪 · 动作冒险 | PS5 / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 100</span>
+      </div>
+      <div class="game-desc">
+        等待 13 年的神作。全新 Vice City，双主角叙事（男女）。11 月 19 日登陆 PS5/Xbox Series。PC 版需等待。不容置疑的年度最受期待游戏。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">11月19日</span>
+        <span class="badge badge-platform">PS5</span>
+        <span class="badge badge-platform">XSX|S</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-other" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Rockstar 官网</a>
+      </div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">🥈 漫威金刚狼（Marvel's Wolverine）</div>
+          <div class="game-meta">Insomniac Games / Sony | 动作 · 开放世界 · 超级英雄 | PS5 独占</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 97</span>
+      </div>
+      <div class="game-desc">
+        Insomniac 继《蜘蛛侠》后打造的暴力动作大作。金刚狼钢爪撕裂、自愈、野性狂暴，深挖罗根坎坷身世。PS5 Pro 画质增强模式。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">9月15日</span>
+        <span class="badge badge-platform">PS5 独占</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-other" href="https://www.playstation.com/en-us/games/marvels-wolverine/" target="_blank" rel="noopener">PlayStation 页面</a>
+      </div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">🥉 影之刃零（Phantom Blade Zero）</div>
+          <div class="game-meta">灵游坊 | 动作 · 武侠 · 硬核 | PC / PS5</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 92</span>
+      </div>
+      <div class="game-desc">
+        国风硬核冷兵器动作游戏，美术风格极其出色。虚实连招、破防反击、武器变形机制，50+ 把主副武器。高难度无伤挑战体系。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">10月29日</span>
+        <span class="badge badge-platform">PC</span>
+        <span class="badge badge-platform">PS5</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-steam" href="https://store.steampowered.com/search/?term=Phantom+Blade+Zero" target="_blank" rel="noopener">Steam 搜索</a>
+      </div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">4. 鬼武者：剑之道（Onimusha: Way of the Sword）</div>
+          <div class="game-meta">卡普空 | 动作 · 和风 · 战国 | PC / PS5 / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 85</span></div>
+      <div class="game-desc">鬼武者系列正统新作，回归战国硬核居合斩。主打"一闪"弹刀斩杀机制，试玩版好评如潮。被玩家称为"只狼拼刀的进阶版"。</div>
+      <div class="badges"><span class="badge badge-date">9月25日</span><span class="badge badge-platform">PC</span><span class="badge badge-platform">PS5</span><span class="badge badge-platform">XSX|S</span></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">5. 控制：共振（Control: Resonance）</div>
+          <div class="game-meta">Remedy Entertainment | 动作冒险 · 超自然 · 叙事 | PC / PS5 / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 83</span></div>
+      <div class="game-desc">控制系列独立新章，杰西深入联邦控制局深层异次元。摒弃射击全面拥抱动作元素，武器可解锁多种形态，重力异常动态环境。</div>
+      <div class="badges"><span class="badge badge-date">9月24日</span><span class="badge badge-platform">PC</span><span class="badge badge-platform">PS5</span><span class="badge badge-platform">XSX|S</span></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">6. 寂静岭：Townfall（Silent Hill: Townfall）</div>
+          <div class="game-meta">Konami / No Code | 恐怖 · 心理 · 生存 | PC / PS5 / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 80</span></div>
+      <div class="game-desc">寂静岭全新心理恐怖作品，小镇陷落式开放场景。经典雾霭、诡异怪物回归，聚焦居民内心创伤与循环噩梦叙事。潜行生存为主，缺少有效战斗手段。</div>
+      <div class="badges"><span class="badge badge-date">9月24日</span><span class="badge badge-platform">PC</span><span class="badge badge-platform">PS5</span><span class="badge badge-platform">XSX|S</span></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">7. 战争机器：事变日（Gears of War: E-Day）</div>
+          <div class="game-meta">The Coalition / Xbox | TPS · 射击 · 掩体 | PC / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 82</span></div>
+      <div class="game-desc">兽族异变爆发初期前传故事，虚幻引擎 5 打造。掩体射击迭代升级，新增重型攻城武器与潜行暗杀。120Hz 高刷支持。</div>
+      <div class="badges"><span class="badge badge-date">10月6日</span><span class="badge badge-platform">PC</span><span class="badge badge-platform">XSX|S</span></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">8. 使命召唤23：现代战争4（Call of Duty: Modern Warfare IV）</div>
+          <div class="game-meta">Activision | FPS · 射击 · 军事 | PC / PS5 / XSX|S / Switch 2</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 88</span></div>
+      <div class="game-desc">141 特遣队再次集结，反派马卡洛夫回归。单人战役多场景跨国作战，多人模式翻新地图与枪械平衡，中文配音。年货大作稳定输出。</div>
+      <div class="badges"><span class="badge badge-date">10月23日</span><span class="badge badge-platform">多平台</span></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">9. 皇牌空战8：希孚之翼（Ace Combat 8）</div>
+          <div class="game-meta">万代南梦宫 | 空战 · 射击 · 模拟 | PC / PS5 / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 75</span></div>
+      <div class="game-desc">虚幻 5 + 自研云层引擎，数十架现实原型+原创战机。自定义涂装、联机合作闯关、自由空战对抗。兼容 VR。</div>
+      <div class="badges"><span class="badge badge-date">10月2日</span><span class="badge badge-platform">PC</span><span class="badge badge-platform">PS5</span><span class="badge badge-platform">XSX|S</span></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">10. 恶魔城：贝尔蒙特的诅咒（Castlevania: Curse of Belmont）</div>
+          <div class="game-meta">《死亡细胞》团队参与 | 银河恶魔城 · 动作 | PC / PS5 / XSX|S</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 78</span></div>
+      <div class="game-desc">《死亡细胞》团队参与开发的恶魔城独立新作。多代贝尔蒙特先祖登场，鞭子/圣武器/魔法自由搭配，海量隐藏房间。Metroidvania 爱好者必入。</div>
+      <div class="badges"><span class="badge badge-date">10月15日</span><span class="badge badge-platform">PC</span><span class="badge badge-platform">PS5</span><span class="badge badge-platform">XSX|S</span></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================== -->
+<!--  手游  -->
+<!-- ============================== -->
+<div class="section">
+  <div class="section-title mobile">📱 手游端</div>
+
+  <!-- 本周/近期已上线 -->
+  <div class="sub-section">
+    <div class="sub-title">📌 本周 / 近期已上线</div>
+
+    <!-- 失控进化 -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/失控进化" target="_blank" rel="noopener">🏝️ 失控进化</a>
+          </div>
+          <div class="game-meta">无端科技研发 · 腾讯发行 | 开放世界 · 硬核生存 · SOC</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 98</span>
+        <span class="idx idx-rec">⭐ 推荐 75</span>
+      </div>
+      <div class="game-desc">
+        《Rust》正版玩法授权，全网预约突破 5000 万。4×4km 无缝荒岛，采集建造、抄家攻防、赛季清零。PC/手机多端互通，纯外观付费无数值氪金。TapTap 评分 8.6。<br>
+        <span style="color:#ff6b6b;">⚠️ 注意：</span>开服首日存在优化问题（卡顿/掉帧/发热），独狼体验较差，需组队才能完整体验。"睡一觉家没了"已成经典吐槽。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月9日公测</span>
+        <span class="badge badge-taptap">TapTap 8.6</span>
+        <span class="badge badge-platform">iOS</span>
+        <span class="badge badge-platform">Android</span>
+        <span class="badge badge-platform">鸿蒙</span>
+        <span class="badge badge-platform">PC</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-taptap" href="https://www.taptap.cn/app/733908" target="_blank" rel="noopener">TapTap 页面</a>
+      </div>
+    </div>
+
+    <!-- 遗忘之海 -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/遗忘之海" target="_blank" rel="noopener">🌊 遗忘之海</a>
+          </div>
+          <div class="game-meta">网易 Joker 工作室（《第五人格》团队）| 开放世界 RPG · 海洋奇遇</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 92</span>
+        <span class="idx idx-rec">⭐ 推荐 82</span>
+      </div>
+      <div class="game-desc">
+        木偶哥特画风海洋开放世界 RPG。扮演失忆木偶船长，在广阔海洋上"搜打撤"——探索岛屿、搜刮宝藏、与海怪战斗。全平台预约超 3500 万。PC 端已先行公测，手游端紧随其后。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月公测（PC先行）</span>
+        <span class="badge badge-taptap">TapTap 8.7</span>
+        <span class="badge badge-platform">iOS</span>
+        <span class="badge badge-platform">Android</span>
+        <span class="badge badge-platform">PC</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-taptap" href="https://www.taptap.cn/search/遗忘之海" target="_blank" rel="noopener">TapTap 搜索</a>
+      </div>
+    </div>
+
+    <!-- 纸嫁衣9 -->
+    <div class="game-card released">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/纸嫁衣9罗浮梦" target="_blank" rel="noopener">👻 纸嫁衣9：罗浮梦</a>
+          </div>
+          <div class="game-meta">纸嫁衣工作室 | 中式民俗 · 悬疑解谜 · 单机</div>
+        </div>
+      </div>
+      <div class="indices">
+        <span class="idx idx-hot">🔥 热度 85</span>
+        <span class="idx idx-rec">⭐ 推荐 88</span>
+      </div>
+      <div class="game-desc">
+        国产悬疑解谜标杆系列第九作。本次转向"梦境"主题——「南柯掘来状元酒，黄粱煮沸女儿红」，探索益昌镇的诡异纸人。TapTap 9.4 分，系列口碑稳定，7 月 16 日 10:00 正式上线。
+      </div>
+      <div class="badges">
+        <span class="badge badge-date">7月16日</span>
+        <span class="badge badge-taptap">TapTap 9.4</span>
+        <span class="badge badge-platform">iOS</span>
+        <span class="badge badge-platform">Android</span>
+      </div>
+      <div class="links-row">
+        <a class="link-btn link-taptap" href="https://www.taptap.cn/search/纸嫁衣9罗浮梦" target="_blank" rel="noopener">TapTap 搜索</a>
+      </div>
+    </div>
+
+    <!-- 命运代码侵入 -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/命运代码侵入" target="_blank" rel="noopener">🔍 命运代码：侵入（全网公敌2 移动端）</a>
+          </div>
+          <div class="game-meta"> | 解谜 · 黑客 · 叙事 | TapTap 独家</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 70</span></div>
+      <div class="game-desc">《全网公敌2：新世界》移动端，7 月 25 日 TapTap 独家上线。网络调查 + 黑客模拟玩法，PC 版口碑出色。</div>
+      <div class="badges"><span class="badge badge-date">7月25日</span><span class="badge badge-platform">TapTap 独家</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/命运代码侵入" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+    <!-- 火炬之光 -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/火炬之光无限" target="_blank" rel="noopener">🔥 火炬之光：无限 — 新赛季「守夜人」</a>
+          </div>
+          <div class="game-meta">心动网络 | ARPG · 暗黑Like · 刷宝</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 65</span></div>
+      <div class="game-desc">全新赛季「守夜人」7 月 17 日开启，全新英雄特性「与深海共舞」。暗黑 Like 手游中品质领先的持续运营产品。</div>
+      <div class="badges"><span class="badge badge-date">7月17日</span><span class="badge badge-platform">iOS</span><span class="badge badge-platform">Android</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/火炬之光无限" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+    <!-- 黄油猫 -->
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/黄油猫" target="_blank" rel="noopener">🐱 黄油猫</a>
+          </div>
+          <div class="game-meta"> | 平台解谜 · 休闲 · 移植</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 60</span></div>
+      <div class="game-desc">Steam 98% 好评如潮的猫咪平台解谜游戏移植移动端。7 月 30 日 TapTap 上线。旋转关卡、巧用黄油吐司物理法则，可爱又烧脑。</div>
+      <div class="badges"><span class="badge badge-date">7月30日</span><span class="badge badge-platform">TapTap</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/黄油猫" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+  </div>
+
+  <!-- 热门测试/预约 -->
+  <div class="sub-section">
+    <div class="sub-title">🔥 热门测试中 / 预约中</div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/怪物猎人旅人" target="_blank" rel="noopener">🗡️ 怪物猎人：旅人</a>
+          </div>
+          <div class="game-meta">卡普空授权 · 腾讯天美 | 动作 · 狩猎 · 共斗</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 90</span></div>
+      <div class="game-desc">怪物猎人正版授权移动端新作。「启明测试」招募已开启，天美工作室研发。猎人们的手心狩猎梦即将实现。</div>
+      <div class="badges"><span class="badge badge-date">启明测试招募中</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/怪物猎人旅人" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/异人之下" target="_blank" rel="noopener">🥋 异人之下</a>
+          </div>
+          <div class="game-meta">腾讯魔方工作室 | 3D 格斗 · 国漫 IP · 《一人之下》</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 88</span></div>
+      <div class="game-desc">全平台预约突破 3000 万。魔方工作室 3D 格斗旗舰作，还原《一人之下》经典角色与中式武学招式。冯宝宝、王也、夏荷等可操控。预计 Q4 上线。</div>
+      <div class="badges"><span class="badge badge-date">预计2026 Q4</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/异人之下" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/蓝色星原旅谣" target="_blank" rel="noopener">⭐ 蓝色星原：旅谣</a>
+          </div>
+          <div class="game-meta"> | 幻想大世界 RPG · 星宠结伴</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 85</span></div>
+      <div class="game-desc">星宠结伴幻想大世界 RPG。「旅迹测试」招募中（7 月 10 日起）。精美的二次元画风，星临者与星宠共同冒险。</div>
+      <div class="badges"><span class="badge badge-date">旅迹测试招募中</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/蓝色星原旅谣" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/山海奇旅" target="_blank" rel="noopener">🏝️ 山海奇旅</a>
+          </div>
+          <div class="game-meta"> | 休闲 · 模拟经营 · 治愈</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 65</span></div>
+      <div class="game-desc">治愈系模拟经营新作，首测「冒泡测试」定档 7 月 24 日。在浮梦岛上度过悠闲夏日，画风清新可爱。</div>
+      <div class="badges"><span class="badge badge-date">首测7月24日</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/山海奇旅" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+    <div class="game-card upcoming">
+      <div class="game-header">
+        <div>
+          <div class="game-name">
+            <a href="https://www.taptap.cn/search/铃兰之剑" target="_blank" rel="noopener">⚔️ 铃兰之剑 — 新篇章「祷铃为谁而鸣」</a>
+          </div>
+          <div class="game-meta">心动网络 | 战棋 SRPG · 像素</div>
+        </div>
+      </div>
+      <div class="indices"><span class="idx idx-hot">🔥 热度 58</span></div>
+      <div class="game-desc">铃兰之剑全新剧情篇章 7 月 24 日开启。信仰与人心交织的光辉国度，像素战棋标杆持续更新。</div>
+      <div class="badges"><span class="badge badge-date">7月24日</span></div>
+      <div class="links-row"><a class="link-btn link-taptap" href="https://www.taptap.cn/search/铃兰之剑" target="_blank" rel="noopener">TapTap 搜索</a></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NOTE -->
+<div class="note">
+  <strong>📋 说明：</strong>
+  <ul style="margin:8px 0 0 16px; line-height:1.8;">
+    <li>热度指数综合愿望单/预约数、社交媒体讨论度、搜索量等评定，为相对比较值。</li>
+    <li>推荐指数仅适用于已上线游戏，基于 Steam 好评率 / Metacritic / TapTap 评分及玩家口碑。</li>
+    <li>主机端游戏（Switch/PS5/Xbox）跳转至各平台官方商店页面或任天堂官网，手游跳转至 TapTap。</li>
+    <li>部分刚上线游戏评分仍在累积中，后续可能变化。敬请以实际体验为准。</li>
+    <li>游戏发售日期可能变更，请以官方公告为准。数据截至 2026 年 7 月 15 日。</li>
+  </ul>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p>每周新游推荐 · 自动化生成 | 2026年7月15日 | 数据来源：Steam / TapTap / Metacritic / 各大游戏媒体</p>
+</div>
+
+</div>
+
+</body>
+</html>
