@@ -106,6 +106,26 @@ body {
   position: relative;
   overflow: hidden;
 }
+
+.game-cover {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  background: #1a1a24;
+}
+.game-cover-placeholder {
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #2d2d3a;
+}
+
 .game-card:hover {
   background: var(--card-hover);
   border-color: var(--accent);
@@ -303,6 +323,7 @@ body {
 
     <!-- Dinoblade -->
     <div class="game-card featured">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3440070/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/3440070/Dinoblade/" target="_blank">🦖 Dinoblade</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -353,6 +374,7 @@ body {
 
     <!-- Tears of Metal -->
     <div class="game-card">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1913120/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/1913120/Tears_of_Metal/" target="_blank">⚔️ Tears of Metal</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC (抢先体验)</span>
@@ -379,6 +401,7 @@ body {
 
     <!-- Avatar Legends: The Fighting Game -->
     <div class="game-card">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2707040/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2707040/Avatar_Legends_The_Fighting_Game/" target="_blank">💨 Avatar Legends: The Fighting Game</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -405,6 +428,7 @@ body {
 
     <!-- Scarlet Deer Inn -->
     <div class="game-card">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1553260/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/1553260/Scarlet_Deer_Inn/" target="_blank">🪡 Scarlet Deer Inn（红鹿旅馆）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -455,6 +479,7 @@ body {
 
     <!-- Disgaea Mayhem -->
     <div class="game-card">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2640470/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2640470/Disgaea_Mayhem/" target="_blank">😈 Disgaea Mayhem（魔界战记 乱）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -538,6 +563,7 @@ body {
 
     <!-- Halo: Campaign Evolved -->
     <div class="game-card featured">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2806050/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/" target="_blank">🔫 Halo: Campaign Evolved（光环:战役进化）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -564,6 +590,7 @@ body {
 
     <!-- The Relic: First Guardian -->
     <div class="game-card featured">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2827820/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2827820/The_Relic_First_Guardian/" target="_blank">🗡️ The Relic: First Guardian</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -590,6 +617,7 @@ body {
 
     <!-- Mistfall Hunter -->
     <div class="game-card">
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3282300/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
       <div class="game-name"><a href="https://store.steampowered.com/app/3282300/Mistfall_Hunter/" target="_blank">🌫️ Mistfall Hunter</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -918,6 +946,7 @@ body {
 
     <!-- 失控进化 -->
     <div class="game-card">
+      <div class="game-cover-placeholder" style="background: linear-gradient(135deg, #00b89422, #00b89411);"><span style="font-size: 2em;">📱</span></div>
       <div class="game-name"><a href="https://www.taptap.cn/app/733908" target="_blank">🏝️ 失控进化</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android · PC</span>
@@ -1024,6 +1053,7 @@ body {
 
     <!-- 黄油猫 -->
     <div class="game-card featured">
+      <div class="game-cover-placeholder" style="background: linear-gradient(135deg, #00b89422, #00b89411);"><span style="font-size: 2em;">📱</span></div>
       <div class="game-name"><a href="https://www.taptap.cn/app/708247" target="_blank">🐱 黄油猫（CATO）</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
