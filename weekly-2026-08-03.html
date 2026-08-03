@@ -6,14 +6,14 @@
 <title>每周新游推荐 — 2026年8月3日</title>
 <style>
 :root {
-  --bg: #0a0a0f;
-  --card: #13131a;
-  --card-hover: #1a1a24;
-  --border: #252530;
-  --text: #e0e0e6;
-  --text-secondary: #9090a0;
-  --accent: #6c5ce7;
-  --accent-glow: rgba(108,92,231,0.25);
+  --bg: #0d0d14;
+  --card: #16161f;
+  --card-hover: #1d1d28;
+  --border: #2a2a38;
+  --text: #e8e8ee;
+  --text-secondary: #a6a6b8;
+  --accent: #7c6cf0;
+  --accent-glow: rgba(124,108,240,0.28);
   --heat-high: #ff4757;
   --heat-mid: #ffa502;
   --heat-low: #2ed573;
@@ -30,7 +30,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   min-height: 100vh;
 }
 .hero {
@@ -65,7 +65,7 @@ body {
   position: relative; z-index: 1;
 }
 .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
-.section { margin: 48px 0; }
+.section { margin: 48px 0; scroll-margin-top: 70px; }
 .section-header {
   display: flex;
   align-items: center;
@@ -97,12 +97,12 @@ body {
   border-left: 3px solid var(--accent);
 }
 
-.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 18px; }
 .game-card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 14px;
+  padding: 22px;
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
@@ -169,15 +169,15 @@ body {
 .release-date { color: var(--text-secondary); }
 
 .game-desc {
-  font-size: 0.88em;
-  color: #b0b0ba;
+  font-size: 0.92em;
+  color: #c2c2cc;
   margin-bottom: 14px;
-  line-height: 1.55;
+  line-height: 1.7;
 }
 
 .index-row {
   display: flex;
-  gap: 16px;
+  gap: 18px;
   margin-bottom: 10px;
 }
 .index-item {
@@ -187,7 +187,7 @@ body {
   padding: 8px 12px;
   text-align: center;
 }
-.index-label { font-size: 0.7em; color: var(--text-secondary); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.index-label { font-size: 0.72em; color: #b4b4c4; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.6px; }
 .index-value { font-size: 1.5em; font-weight: 800; }
 .index-bar {
   height: 4px;
@@ -197,8 +197,8 @@ body {
   overflow: hidden;
 }
 .index-bar-fill { height: 100%; border-radius: 2px; transition: width 0.6s ease; }
-.heat-fill { background: linear-gradient(90deg, var(--heat-mid), var(--heat-high)); }
-.rec-fill { background: linear-gradient(90deg, var(--rec-mid), var(--rec-high)); }
+.heat-fill { background: linear-gradient(90deg, #ffa502, #ff4757); }
+.rec-fill { background: linear-gradient(90deg, #2ed573, #00cec9); }
 .na-fill { background: #3d3d4a; }
 
 .game-link {
@@ -269,7 +269,7 @@ body {
   margin: 20px 0;
   font-size: 0.85em;
   color: #a29bfe;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .note-box strong { color: #c4b5fd; }
 
@@ -281,7 +281,7 @@ body {
   margin: 20px 0;
   font-size: 0.85em;
   color: #ffbe76;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 .warning-box strong { color: #ffa502; }
 
@@ -315,6 +315,28 @@ body {
   margin-right: 8px;
 }
 
+
+html { scroll-behavior: smooth; }
+.top-nav {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; justify-content: center; gap: 8px; flex-wrap: wrap;
+  padding: 10px 16px;
+  background: rgba(13,13,20,0.85);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.top-nav a { color: var(--text-secondary); text-decoration: none; font-size: 0.85em; padding: 6px 14px; border-radius: 20px; border: 1px solid transparent; transition: all 0.2s; }
+.top-nav a:hover, .top-nav a:focus-visible { color: #fff; background: rgba(124,108,240,0.18); border-color: var(--accent); }
+.back-to-top {
+  position: fixed; right: 20px; bottom: 20px; width: 44px; height: 44px; border-radius: 50%;
+  border: 1px solid var(--border); background: rgba(22,22,31,0.9); color: var(--text); font-size: 1.2em; cursor: pointer;
+  opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.25s ease; z-index: 60;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.back-to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+a:focus-visible, .game-link:focus-visible, .top-nav a:focus-visible, .back-to-top:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; scroll-behavior: auto !important; } .game-card:hover { transform: none; } }
 </style>
 </head>
 <body>
@@ -325,10 +347,17 @@ body {
   <div class="date-badge">📅 2026年8月3日 星期一 | 第8期</div>
 </div>
 
+<nav class="top-nav">
+  <a href="#sec-pc">🖥️ PC / 主机</a>
+  <a href="#sec-mobile">📱 手游</a>
+  <a href="#sec-top10">🏆 期待榜</a>
+</nav>
+
+
 <div class="container">
 
 <!-- ====== PC / 主机 — 已上线 ====== -->
-<div class="section">
+<div class="section" id="sec-pc">
   <div class="section-header">
     <span class="section-icon">🖥️</span>
     <span class="section-title">PC / 主机端</span>
@@ -889,7 +918,7 @@ body {
 </div>
 
 <!-- ====== 手游 ====== -->
-<div class="section">
+<div class="section" id="sec-mobile">
   <div class="section-header">
     <span class="section-icon">📱</span>
     <span class="section-title">手游端</span>
@@ -1177,7 +1206,7 @@ body {
 </div>
 
 <!-- ====== 下半年最受期待 TOP10 ====== -->
-<div class="section">
+<div class="section" id="sec-top10">
   <div class="section-header">
     <span class="section-icon">🏆</span>
     <span class="section-title">2026下半年最受期待 TOP10</span>
@@ -1278,5 +1307,10 @@ body {
   <p>⚠️ 评测分数可能随时间波动，以实际购买时页面显示为准 | Beast of Reincarnation和Big Walk于8月4日发售，评分待后续更新</p>
 </div>
 
+
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+<script>
+(function(){var b=document.getElementById('backToTop');function t(){b.classList.toggle('show',window.scrollY>600);}window.addEventListener('scroll',t,{passive:true});b.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});t();})();
+</script>
 </body>
 </html>
