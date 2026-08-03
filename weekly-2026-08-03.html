@@ -291,6 +291,30 @@ body {
   .index-row { flex-direction: column; gap: 8px; }
   .top10-table { font-size: 0.8em; }
 }
+
+.game-cover-fallback {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #a29bfe;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-align: center;
+  padding: 16px;
+  min-height: 120px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px dashed rgba(108,92,231,0.3);
+  letter-spacing: 0.5px;
+}
+.game-cover-fallback::before {
+  content: "🎮";
+  display: block;
+  font-size: 1.5em;
+  margin-right: 8px;
+}
+
 </style>
 </head>
 <body>
@@ -322,7 +346,7 @@ body {
 
     <!-- Halo: Campaign Evolved -->
     <div class="game-card featured">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2806050/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2806050/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2806050/Halo_Campaign_Evolved/" target="_blank">🔫 Halo: Campaign Evolved（光环:战役进化）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -349,7 +373,7 @@ body {
 
     <!-- Kusan: City of Wolves -->
     <div class="game-card featured">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1714510/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1714510/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/1714510/Kusan_City_of_Wolves/" target="_blank">🐺 Kusan: City of Wolves</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -376,7 +400,7 @@ body {
 
     <!-- Mistfall Hunter -->
     <div class="game-card">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3282300/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3282300/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/3282300/Mistfall_Hunter/" target="_blank">🌫️ Mistfall Hunter（雾影猎人）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -403,7 +427,7 @@ body {
 
     <!-- The Relic: First Guardian -->
     <div class="game-card">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2827820/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2827820/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2827820/The_Relic_First_Guardian/" target="_blank">🗡️ The Relic: First Guardian</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -430,6 +454,7 @@ body {
 
     <!-- Xenoblade 2 NS2 -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">异度神剑2 Switch 2版</div>
       <div class="game-name"><a href="https://www.nintendo.com/us/store/products/xenoblade-chronicles-2-nintendo-switch-2-edition/" target="_blank">🌟 异度神剑2 Switch 2版</a></div>
       <div class="game-meta">
         <span class="platform-tag console-tag">Switch 2 独占</span>
@@ -455,6 +480,7 @@ body {
 
     <!-- Corsair Cove -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">Corsair Cove（海盗湾）</div>
       <div class="game-name"><a href="https://store.steampowered.com/search/?term=Corsair+Cove" target="_blank">🏴‍☠️ Corsair Cove（海盗湾）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -480,6 +506,7 @@ body {
 
     <!-- CoH3 Final Stand -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">Company of Heroes 3: Final Stand</div>
       <div class="game-name"><a href="https://store.steampowered.com/search/?term=Company+of+Heroes+3+Final+Stand" target="_blank">🪖 Company of Heroes 3: Final Stand</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -512,7 +539,7 @@ body {
 
     <!-- Beast of Reincarnation -->
     <div class="game-card featured">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2001760/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/2001760/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/2001760/Beast_of_Reincarnation/" target="_blank">🐺 Beast of Reincarnation</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -539,7 +566,7 @@ body {
 
     <!-- Big Walk -->
     <div class="game-card featured">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1478500/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1478500/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/1478500/Big_Walk/" target="_blank">🚶 Big Walk</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC · Mac</span>
@@ -566,7 +593,7 @@ body {
 
     <!-- Marvel TOKON -->
     <div class="game-card featured">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3787240/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/3787240/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/3787240/MARVEL_Tokon_Fighting_Souls/" target="_blank">🦸 漫威斗魂（MARVEL Tōkon: Fighting Souls）</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -593,7 +620,7 @@ body {
 
     <!-- Akatori -->
     <div class="game-card">
-      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1442520/header.jpg" alt="" loading="lazy" onerror="this.style.display='none'" />
+      <img class="game-cover" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1442520/header.jpg" alt="" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'game-cover game-cover-fallback',textContent:this.alt||'暂无封面'}))" />
       <div class="game-name"><a href="https://store.steampowered.com/app/1442520/Akatori/" target="_blank">🎋 Akatori</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -620,6 +647,7 @@ body {
 
     <!-- GRAIN ROT -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">GRAIN ROT</div>
       <div class="game-name"><a href="https://store.steampowered.com/app/4450620/GRAIN_ROT/" target="_blank">🌾 GRAIN ROT</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -645,6 +673,7 @@ body {
 
     <!-- IRON NEST -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">IRON NEST: Heavy Turret Simulator</div>
       <div class="game-name"><a href="https://store.steampowered.com/app/2950790/IRON_NEST/" target="_blank">🏰 IRON NEST: Heavy Turret Simulator</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -670,6 +699,7 @@ body {
 
     <!-- Expeditions: Samurai -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">Expeditions: Samurai</div>
       <div class="game-name"><a href="https://store.steampowered.com/search/?term=Expeditions+Samurai" target="_blank">⛩️ Expeditions: Samurai</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC（抢先体验）</span>
@@ -695,6 +725,7 @@ body {
 
     <!-- Sovereign Tower -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">Sovereign Tower</div>
       <div class="game-name"><a href="https://store.steampowered.com/app/4113940/Sovereign_Tower/" target="_blank">🏰 Sovereign Tower</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -725,6 +756,7 @@ body {
   <div class="game-grid">
 
     <div class="game-card featured">
+      <div class="game-cover game-cover-fallback">Hell Let Loose: Vietnam</div>
       <div class="game-name"><a href="https://store.steampowered.com/search/?term=Hell+Let+Loose+Vietnam" target="_blank">🪖 Hell Let Loose: Vietnam</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -750,6 +782,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">The Sinking City 2</div>
       <div class="game-name"><a href="https://store.steampowered.com/search/?term=The+Sinking+City+2" target="_blank">🐙 The Sinking City 2</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -775,6 +808,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">Mortal Shell 2</div>
       <div class="game-name"><a href="https://store.steampowered.com/search/?term=Mortal+Shell+2" target="_blank">💀 Mortal Shell 2</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -800,6 +834,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">MGS合集 Vol.2</div>
       <div class="game-name"><a href="https://www.konami.com/games/mgmc/vol2/" target="_blank">📦 MGS合集 Vol.2</a></div>
       <div class="game-meta">
         <span class="platform-tag pc-tag">PC</span>
@@ -825,6 +860,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">Elden Ring: Tarnished Edition</div>
       <div class="game-name"><a href="https://www.nintendo.com/us/store/products/elden-ring-tarnished-edition-switch-2/" target="_blank">💍 Elden Ring: Tarnished Edition</a></div>
       <div class="game-meta">
         <span class="platform-tag console-tag">Switch 2 独占</span>
@@ -871,6 +907,7 @@ body {
 
     <!-- 黄油猫 -->
     <div class="game-card featured">
+      <div class="game-cover game-cover-fallback">黄油猫（CATO）</div>
       <div class="game-name"><a href="https://www.taptap.cn/app/708247" target="_blank">🐱 黄油猫（CATO）</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
@@ -896,6 +933,7 @@ body {
 
     <!-- 盗墓笔记启程 -->
     <div class="game-card featured">
+      <div class="game-cover game-cover-fallback">盗墓笔记:启程</div>
       <div class="game-name"><a href="https://www.taptap.cn/app/716674" target="_blank">🏛️ 盗墓笔记:启程</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
@@ -921,6 +959,7 @@ body {
 
     <!-- 三国志将星闪耀 -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">三国志将星闪耀</div>
       <div class="game-name"><a href="https://www.taptap.cn/app/749667" target="_blank">⭐ 三国志将星闪耀</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
@@ -946,6 +985,7 @@ body {
 
     <!-- 失控进化 -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">失控进化</div>
       <div class="game-name"><a href="https://www.taptap.cn/app/733908" target="_blank">🏝️ 失控进化</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android · PC</span>
@@ -971,6 +1011,7 @@ body {
 
     <!-- 遗忘之海 -->
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">遗忘之海</div>
       <div class="game-name"><a href="https://www.taptap.cn/search/%E9%81%97%E5%BF%98%E4%B9%8B%E6%B5%B7" target="_blank">🌊 遗忘之海</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android · PC</span>
@@ -1001,6 +1042,7 @@ body {
   <div class="game-grid">
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">诡秘之主</div>
       <div class="game-name"><a href="https://www.taptap.cn/search/%E8%AF%A1%E7%A7%98%E4%B9%8B%E4%B8%BB" target="_blank">📖 诡秘之主</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
@@ -1025,6 +1067,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">元素方尖</div>
       <div class="game-name"><a href="https://www.taptap.cn/search/%E5%85%83%E7%B4%A0%E6%96%B9%E5%B0%96" target="_blank">💎 元素方尖</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
@@ -1055,6 +1098,7 @@ body {
   <div class="game-grid">
 
     <div class="game-card featured">
+      <div class="game-cover game-cover-fallback">怪物猎人:旅人</div>
       <div class="game-name"><a href="https://www.taptap.cn/search/%E6%80%AA%E7%89%A9%E7%8C%8E%E4%BA%BA%E6%97%85%E4%BA%BA" target="_blank">⚔️ 怪物猎人:旅人</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
@@ -1079,6 +1123,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">蓝色星原:旅谣</div>
       <div class="game-name"><a href="https://www.taptap.cn/search/%E8%93%9D%E8%89%B2%E6%98%9F%E5%8E%9F%E6%97%85%E8%B0%A3" target="_blank">⭐ 蓝色星原:旅谣</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android · PC</span>
@@ -1103,6 +1148,7 @@ body {
     </div>
 
     <div class="game-card">
+      <div class="game-cover game-cover-fallback">异人之下</div>
       <div class="game-name"><a href="https://www.taptap.cn/search/%E5%BC%82%E4%BA%BA%E4%B9%8B%E4%B8%8B" target="_blank">🎭 异人之下</a></div>
       <div class="game-meta">
         <span class="platform-tag mobile-tag">iOS · Android</span>
