@@ -93,11 +93,21 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
 
 /* upcoming list */
 .upcoming-list{display:flex;flex-direction:column;gap:8px}
-.upcoming-item{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--card);border-radius:10px;border:1px solid var(--border);flex-wrap:wrap}
-.upcoming-date{font-size:.78em;color:var(--accent);font-weight:600;min-width:56px}
-.upcoming-name{flex:1;font-weight:600;font-size:.95em;min-width:150px}
-.upcoming-platform{font-size:.75em;color:var(--sub)}
-.upcoming-heat{font-size:.82em;font-weight:700;color:var(--accent2)}
+.upcoming-item{display:flex;align-items:center;gap:14px;padding:12px 18px;background:var(--card);border-radius:12px;border:1px solid var(--border);flex-wrap:wrap;transition:all .2s}
+.upcoming-item:hover{border-color:rgba(255,165,2,.35);background:#1a1a25;transform:translateX(2px)}
+.upcoming-date{display:inline-flex;align-items:center;justify-content:center;min-width:50px;padding:5px 10px;background:rgba(255,165,2,.15);color:var(--accent);border-radius:6px;font-size:.82em;font-weight:700;letter-spacing:.02em;line-height:1.2}
+.upcoming-badge{display:inline-flex;align-items:center;gap:3px;padding:3px 8px;background:rgba(255,71,87,.16);color:#ff4757;border:1px solid rgba(255,71,87,.32);border-radius:6px;font-size:.68em;font-weight:600;line-height:1.2;white-space:nowrap}
+.upcoming-badge.gray{background:rgba(166,166,184,.12);color:var(--sub);border-color:rgba(166,166,184,.28)}
+.upcoming-name{flex:1;font-weight:600;font-size:.95em;min-width:150px;line-height:1.4}
+.upcoming-name .cn{color:var(--sub);font-weight:500;margin-left:4px}
+.upcoming-platform{font-size:.75em;color:var(--sub);text-align:right;line-height:1.4}
+.upcoming-heat{font-size:.85em;font-weight:700;color:var(--accent2);white-space:nowrap}
+@media(max-width:768px){
+  .upcoming-item{padding:10px 14px;gap:10px}
+  .upcoming-date{min-width:44px;font-size:.78em}
+  .upcoming-name{flex:1 1 100%;order:3}
+  .upcoming-platform{flex:1;text-align:left;order:4}
+}
 
 /* footer */
 .page-footer{text-align:center;padding:40px 0 28px;color:var(--sub);font-size:.78em;border-top:1px solid var(--border);margin-top:40px}
@@ -430,48 +440,44 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
   <div class="upcoming-list">
     <div class="upcoming-item">
       <span class="upcoming-date">9/3</span>
-      <span class="tag tag-hot">🔥 重磅</span>
-      <span class="upcoming-name">The Blood of Dawnwalker（黎明行者之血）</span>
+      <span class="upcoming-badge">🔥 互动</span>
+      <span class="upcoming-name">The Blood of Dawnwalker<span class="cn">（黎明行者之血）</span></span>
       <span class="upcoming-platform">PC / PS5 / Xbox Series · Rebel Wolves（巫师3总监创立）</span>
       <span class="upcoming-heat" style="color:var(--accent2)">热度 84</span>
     </div>
     <div class="upcoming-item">
       <span class="upcoming-date">9/4</span>
-      <span class="tag tag-hot">🔥</span>
-      <span class="upcoming-name">Onimusha: Way of the Sword（鬼武者：剑之道）</span>
+      <span class="upcoming-name">Onimusha: Way of the Sword<span class="cn">（鬼武者：剑之道）</span></span>
       <span class="upcoming-platform">PC / PS5 / Xbox · Capcom</span>
       <span class="upcoming-heat" style="color:var(--accent2)">热度 85</span>
     </div>
     <div class="upcoming-item">
       <span class="upcoming-date">9/9</span>
-      <span class="upcoming-name">Valheim 1.0（英灵神殿）</span>
+      <span class="upcoming-name">Valheim 1.0<span class="cn">（英灵神殿）</span></span>
       <span class="upcoming-platform">PC / Xbox Series · 结束抢先体验</span>
       <span class="upcoming-heat" style="color:var(--accent)">热度 70</span>
     </div>
     <div class="upcoming-item">
       <span class="upcoming-date">9/15</span>
-      <span class="tag tag-hot">🔥</span>
-      <span class="upcoming-name">Marvel's Wolverine（漫威金刚狼）</span>
+      <span class="upcoming-name">Marvel's Wolverine<span class="cn">（漫威金刚狼）</span></span>
       <span class="upcoming-platform">PS5 独占 · Insomniac</span>
       <span class="upcoming-heat" style="color:var(--accent2)">热度 97</span>
     </div>
     <div class="upcoming-item">
       <span class="upcoming-date">9/17</span>
-      <span class="tag tag-hot">🔥</span>
       <span class="upcoming-name">Fire Emblem: Fortune's Weave</span>
       <span class="upcoming-platform">Switch 2 独占 · Nintendo / Intelligent Systems</span>
       <span class="upcoming-heat" style="color:var(--accent2)">热度 82</span>
     </div>
     <div class="upcoming-item">
       <span class="upcoming-date">9/24</span>
-      <span class="upcoming-name">Silent Hill: Townfall（寂静岭：镇落）</span>
+      <span class="upcoming-name">Silent Hill: Townfall<span class="cn">（寂静岭：镇落）</span></span>
       <span class="upcoming-platform">PC / PS5 · Konami</span>
       <span class="upcoming-heat" style="color:var(--accent2)">热度 80</span>
     </div>
     <div class="upcoming-item">
       <span class="upcoming-date">9/24</span>
-      <span class="tag tag-hot">🔥</span>
-      <span class="upcoming-name">Control Resonant（控制：共振）</span>
+      <span class="upcoming-name">Control Resonant<span class="cn">（控制：共振）</span></span>
       <span class="upcoming-platform">PC / PS5 / Xbox · Remedy</span>
       <span class="upcoming-heat" style="color:var(--accent2)">热度 83</span>
     </div>
