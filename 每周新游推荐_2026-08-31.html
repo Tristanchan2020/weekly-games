@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周新游推荐 — 2026年8月31日</title>
+<style>
+:root{
+  --bg:#0d0d14; --card:#16161f; --text:#e8e8ee; --sub:#a6a6b8;
+  --accent:#ffa502; --accent2:#ff4757; --green:#2ed573; --teal:#00cec9;
+  --pink:#ff6b81; --border:#252530;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+a{color:var(--teal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+/* nav */
+.top-nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);padding:14px 0}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:24px;padding:0 28px}
+.nav-logo{font-weight:700;font-size:1.1em;color:var(--text);white-space:nowrap}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap}
+.nav-links a{padding:6px 16px;border-radius:20px;font-size:.88em;color:var(--sub);transition:all .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.08);color:var(--text)}
+
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+
+/* header */
+.page-header{text-align:center;padding:48px 0 24px}
+.page-header h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-header .date{color:var(--sub);font-size:.92em;margin-top:8px}
+.page-header .desc{color:var(--sub);font-size:.85em;margin-top:4px;max-width:600px;margin-inline:auto}
+.page-header .legend{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.75em;color:var(--sub)}
+.legend-item{display:flex;align-items:center;gap:5px}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+
+/* section */
+.section{margin:32px 0}
+.section-title{font-size:1.45em;font-weight:700;margin-bottom:6px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:10px;scroll-margin-top:70px}
+.section-title .icon{font-size:1.3em}
+.section-sub{color:var(--sub);font-size:.85em;margin-bottom:18px}
+
+/* grid */
+.game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px;margin-bottom:10px}
+.game-card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+.game-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+
+.card-img{width:100%;height:160px;object-fit:cover;background:linear-gradient(135deg,#1a1a2e,#2a1a3e);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:.8em;position:relative}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.card-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e1e30,#2e1e40);color:var(--sub);font-size:.82em;text-align:center;padding:10px}
+
+.card-body{padding:18px 22px 22px}
+.card-title{font-size:1.08em;font-weight:700;margin-bottom:4px;line-height:1.35}
+.card-title .cn{color:var(--accent)}
+.card-meta{font-size:.78em;color:var(--sub);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px}
+.card-meta span{background:rgba(255,255,255,.05);padding:2px 8px;border-radius:4px}
+.card-desc{font-size:.92em;line-height:1.7;color:#c2c2cc;margin-bottom:12px}
+
+.card-indices{display:flex;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+.card-index{flex:1;min-width:100px}
+.card-index .label{font-size:.72em;color:#b4b4c4;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.card-index .val{font-size:1.15em;font-weight:700}
+.card-index .bar{height:4px;border-radius:2px;margin-top:4px;transition:width .6s ease}
+
+.bar-heat{background:linear-gradient(90deg,#ffa502,#ff4757)}
+.bar-s5{background:var(--green)}
+.bar-s4{background:var(--teal)}
+.bar-s3{background:var(--accent)}
+.bar-s2{background:var(--sub)}
+.bar-s1{background:var(--pink)}
+
+.rating-stars{font-size:1.05em;letter-spacing:1px}
+.rating-text{font-size:.78em;margin-left:4px}
+
+.card-link{display:inline-flex;align-items:center;gap:4px;font-size:.82em;color:var(--teal);margin-top:6px;transition:color .2s}
+.card-link:hover{color:var(--accent)}
+.card-link svg{width:14px;height:14px}
+
+.tag{display:inline-block;font-size:.68em;padding:2px 7px;border-radius:3px;margin-right:3px;margin-bottom:2px}
+.tag-upcoming{background:rgba(255,165,2,.15);color:var(--accent)}
+.tag-new{background:rgba(46,213,115,.15);color:var(--green)}
+.tag-hot{background:rgba(255,71,87,.15);color:var(--accent2)}
+.tag-ea{background:rgba(0,206,201,.15);color:var(--teal)}
+.tag-exclusive{background:rgba(166,166,184,.15);color:var(--sub)}
+
+/* back2top */
+.back2top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--card);border:1px solid var(--border);color:var(--sub);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3em;transition:all .3s;opacity:0;pointer-events:none;z-index:99}
+.back2top.show{opacity:1;pointer-events:auto}
+.back2top:hover{background:rgba(255,255,255,.1);color:var(--text)}
+
+/* upcoming list */
+.upcoming-list{display:flex;flex-direction:column;gap:8px}
+.upcoming-item{display:flex;align-items:center;gap:12px;padding:10px 16px;background:var(--card);border-radius:10px;border:1px solid var(--border);flex-wrap:wrap}
+.upcoming-date{font-size:.78em;color:var(--accent);font-weight:600;min-width:56px}
+.upcoming-name{flex:1;font-weight:600;font-size:.95em;min-width:150px}
+.upcoming-platform{font-size:.75em;color:var(--sub)}
+.upcoming-heat{font-size:.82em;font-weight:700;color:var(--accent2)}
+
+/* footer */
+.page-footer{text-align:center;padding:40px 0 28px;color:var(--sub);font-size:.78em;border-top:1px solid var(--border);margin-top:40px}
+.page-footer a{color:var(--sub)}
+
+/* top10 special */
+.top10-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
+.top10-item{display:flex;gap:14px;padding:14px 18px;background:var(--card);border-radius:12px;border:1px solid var(--border);align-items:center}
+.top10-rank{font-size:1.8em;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;min-width:40px;text-align:center}
+.top10-info{flex:1}
+.top10-name{font-weight:700;font-size:.95em}
+.top10-meta{font-size:.75em;color:var(--sub);margin-top:2px}
+.top10-heat{font-size:.92em;font-weight:700}
+
+/* responsive */
+@media(max-width:768px){
+  .game-grid{grid-template-columns:1fr}
+  .top10-grid{grid-template-columns:1fr}
+  .nav-links{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .nav-links a{flex-shrink:0}
+  .page-header h1{font-size:1.5em}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <div class="nav-logo">🎮 <span>每周新游推荐</span></div>
+    <div class="nav-links">
+      <a href="#sec-pc" class="active">PC / 主机</a>
+      <a href="#sec-mobile">手游</a>
+      <a href="#sec-upcoming">即将上线</a>
+      <a href="#sec-top10">下半年 TOP10</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<header class="page-header">
+  <h1>每周新游推荐</h1>
+  <div class="date">2026年8月31日 · 第37周</div>
+  <div class="desc">覆盖 PC (Steam)、主机 (Switch 2 / PS5 / Xbox) 与手游 (iOS / Android) 全平台新游动态</div>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span> 热度指数 0–100</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--green)"></span> 推荐评级 ★★★★★</span>
+    <span class="legend-item"><span style="color:var(--accent)">🆕</span> 本周新上线</span>
+    <span class="legend-item"><span style="color:var(--teal)">⏳</span> 即将上线</span>
+    <span class="legend-item"><span style="color:var(--sub)">🔬</span> 抢先体验</span>
+  </div>
+</header>
+
+<!-- ===== PC / 主机 — 本周新游 ===== -->
+<section class="section" id="sec-pc">
+  <h2 class="section-title"><span class="icon">🖥️</span> PC / 主机 — 本周新游</h2>
+  <p class="section-sub">2026年8月25日–31日上线的重点作品</p>
+
+  <div class="game-grid">
+
+    <!-- Star Wars Zero Company -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/zerocompany.jpg" alt="星球大战：零号连队" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">星球大战：零号连队</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Star Wars Zero Company <span class="cn">（星球大战：零号连队）</span></div>
+        <div class="card-meta">
+          <span>PC / PS5 / Xbox Series</span><span>8月27日</span><span class="tag tag-new">🆕</span>
+          <span>Bit Reactor / Respawn / 卢卡斯影业</span>
+        </div>
+        <div class="card-desc">XCOM 老将 Bit Reactor 打造的克隆人战争末期回合制战术，堪称本周口碑黑马。MC <b>85</b>（PC）/84（PS5）、OpenCritic <b>87</b>，IGN 给 9/10，还有两家媒体打出满分。8 大星战种族自定义「操作员」、永久死亡机制、电影级叙事是最大亮点；少数批评集中在部分过场与镜头细节。$49.99，星战与战术双厨必入。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">88</div>
+            <div class="bar bar-heat" style="width:88%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div>
+            <div class="bar bar-s4" style="width:80%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/2075800/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Metal Gear Solid Master Collection Vol.2 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/mgs_vol2.jpg" alt="合金装备：大师合集 Vol.2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">合金装备：大师合集 Vol.2</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Metal Gear Solid: Master Collection Vol.2 <span class="cn">（合金装备：大师合集 Vol.2）</span></div>
+        <div class="card-meta">
+          <span>PC / PS5 / Xbox / Switch / Switch 2</span><span>8月27日</span><span class="tag tag-new">🆕</span>
+          <span>Konami</span>
+        </div>
+        <div class="card-desc">《合金装备 4：爱国者之枪》首次离开 PS3，连同 PSP 衍生作《和平行者》（HD 化、支持最多 6 人线上合作）与《幽灵巴别塔》打包登陆现代平台，并附赠原声等数字特典。对老玩家而言是「补完幻影」级别的收藏，全平台同步推出。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">90</div>
+            <div class="bar bar-heat" style="width:90%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div>
+            <div class="bar bar-s4" style="width:80%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/3859630/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Aliens: Fireteam Elite 2 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/aliens2.jpg" alt="异形：火力精英2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">异形：火力精英2</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Aliens: Fireteam Elite 2 <span class="cn">（异形：火力精英2）</span></div>
+        <div class="card-meta">
+          <span>PC / PS5 / Xbox Series</span><span>8月25日</span><span class="tag tag-new">🆕</span>
+          <span>Cold Iron Studios / Daybreak</span>
+        </div>
+        <div class="card-desc">续作加入第四人、更聪明的异形与可自定义的「专家」职业，主打四人小队共斗刷潮。但首发口碑两极：Steam 从「多半差评」爬回「褒贬不一」（约 53% 好评），卡顿掉帧、优化与 $49.99 定价是最大争议。核心爽点在线，但建议观望后续补丁或等折扣。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">76</div>
+            <div class="bar bar-heat" style="width:76%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div>
+            <div class="bar bar-s2" style="width:40%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/3448650/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Resonance: A Plague Tale Legacy -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/resonance.jpg" alt="共鸣：瘟疫传说传承" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">共鸣：瘟疫传说传承</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Resonance: A Plague Tale Legacy <span class="cn">（共鸣：瘟疫传说传承）</span></div>
+        <div class="card-meta">
+          <span>PC / PS5 / Xbox Series</span><span>8月27日</span><span class="tag tag-new">🆕</span>
+          <span>Asobo Studio</span>
+        </div>
+        <div class="card-desc">《瘟疫传说》第三作，剧情前传、设定在《安魂曲》的 15 年前，主角换为少女 Sophia，前往「米诺陶之岛」直面古老诅咒。Asobo 这次大胆打破系列潜行公式，转向刀剑近战。画面氛围依旧顶级，但玩法转向能否成立尚待玩家检验。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">80</div>
+            <div class="bar bar-heat" style="width:80%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div>
+            <div class="bar bar-s3" style="width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/2713000/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Elden Ring: Tarnished Edition -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/eldenring.jpg" alt="艾尔登法环：褪色者版" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">艾尔登法环：褪色者版</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Elden Ring: Tarnished Edition <span class="cn">（艾尔登法环：褪色者版）</span></div>
+        <div class="card-meta">
+          <span>Switch 2 独占</span><span>8月28日</span><span class="tag tag-new">🆕</span>
+          <span>FromSoftware / Bandai Namco</span>
+        </div>
+        <div class="card-desc">年度现象级开放世界魂系首次登陆 Switch 2，合集版内含《艾尔登法环》本体与《黄金树幽影》DLC，支持掌机/底座双模式。能在便携设备上跑「交界地」，本身即是卖点，是本作首次脱离 PC/主机独占的里程碑版本。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">82</div>
+            <div class="bar bar-heat" style="width:82%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div>
+            <div class="bar bar-s4" style="width:80%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://www.nintendo.com/us/store/products/elden-ring-tarnished-edition-switch/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          任天堂商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- 1666: Amsterdam -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/amsterdam1666.jpg" alt="1666：阿姆斯特丹" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">1666：阿姆斯特丹</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">1666: Amsterdam <span class="cn">（1666：阿姆斯特丹）</span></div>
+        <div class="card-meta">
+          <span>PC（抢先体验）</span><span>8月25日</span><span class="tag tag-ea">🔬 EA</span>
+          <span>Patrice Désilets</span>
+        </div>
+        <div class="card-desc">《刺客信条》联合创始人 Patrice Désilets 沉淀多年的「白月光」项目终于面世（抢先体验）。白天在 17 世纪阿姆斯特丹查案，夜晚潜入暗巷猎魔，题材与氛围独树一帜。作为 EA 阶段作品，内容与优化仍在完善，适合抢先试玩的探索型玩家。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">70</div>
+            <div class="bar bar-heat" style="width:70%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div>
+            <div class="bar bar-s3" style="width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/3949550/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Brigandine: Abyss -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/brigandine.jpg" alt="幻想大陆战记 深渊" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">幻想大陆战记 深渊</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Brigandine: Abyss <span class="cn">（幻想大陆战记 深渊）</span></div>
+        <div class="card-meta">
+          <span>PC / PS5 / Xbox / Switch 2</span><span>8月26日</span><span class="tag tag-new">🆕</span>
+          <span>Matrix Software</span>
+        </div>
+        <div class="card-desc">经典策略系列新作，把「大地图 4X 战略」与「六角格战术 RPG」结合，玩家择六大势力之一对抗深渊帝国。介于《火焰纹章》的规模与《全面战争》的复杂度之间，属于日式策略老饕的菜，已有试玩版可先上手。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">65</div>
+            <div class="bar bar-heat" style="width:65%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div>
+            <div class="bar bar-s3" style="width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/3211430/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Captain Tsubasa 2 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/captain_tsubasa2.jpg" alt="队长小翼2 世界群星" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">队长小翼2 世界群星</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Captain Tsubasa 2: World Fighters <span class="cn">（队长小翼2 世界群星）</span></div>
+        <div class="card-meta">
+          <span>PC / PS5 / Xbox / Switch</span><span>8月28日</span><span class="tag tag-new">🆕</span>
+          <span>Bandai Namco</span>
+        </div>
+        <div class="card-desc">《足球小将》改编足球对战续作，延续系列招牌的「必杀技」式热血足球演出，汇聚世界各地明星球员组队竞技。IP 粉与休闲体育游戏玩家可关注，属于强粉丝向作品。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">66</div>
+            <div class="bar bar-heat" style="width:66%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div>
+            <div class="bar bar-s3" style="width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/2172910/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== 下周即将上线 ===== -->
+<section class="section" id="sec-upcoming">
+  <h2 class="section-title"><span class="icon">⏳</span> PC / 主机 — 下周及近期</h2>
+  <p class="section-sub">9月起即将上线，以及近期值得关注的作品</p>
+
+  <div class="upcoming-list">
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/3</span>
+      <span class="tag tag-hot">🔥 重磅</span>
+      <span class="upcoming-name">The Blood of Dawnwalker（黎明行者之血）</span>
+      <span class="upcoming-platform">PC / PS5 / Xbox Series · Rebel Wolves（巫师3总监创立）</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 84</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/4</span>
+      <span class="tag tag-hot">🔥</span>
+      <span class="upcoming-name">Onimusha: Way of the Sword（鬼武者：剑之道）</span>
+      <span class="upcoming-platform">PC / PS5 / Xbox · Capcom</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 85</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/9</span>
+      <span class="upcoming-name">Valheim 1.0（英灵神殿）</span>
+      <span class="upcoming-platform">PC / Xbox Series · 结束抢先体验</span>
+      <span class="upcoming-heat" style="color:var(--accent)">热度 70</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/15</span>
+      <span class="tag tag-hot">🔥</span>
+      <span class="upcoming-name">Marvel's Wolverine（漫威金刚狼）</span>
+      <span class="upcoming-platform">PS5 独占 · Insomniac</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 97</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/17</span>
+      <span class="tag tag-hot">🔥</span>
+      <span class="upcoming-name">Fire Emblem: Fortune's Weave</span>
+      <span class="upcoming-platform">Switch 2 独占 · Nintendo / Intelligent Systems</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 82</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/24</span>
+      <span class="upcoming-name">Silent Hill: Townfall（寂静岭：镇落）</span>
+      <span class="upcoming-platform">PC / PS5 · Konami</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 80</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="upcoming-date">9/24</span>
+      <span class="tag tag-hot">🔥</span>
+      <span class="upcoming-name">Control Resonant（控制：共振）</span>
+      <span class="upcoming-platform">PC / PS5 / Xbox · Remedy</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 83</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 手游 ===== -->
+<section class="section" id="sec-mobile">
+  <h2 class="section-title"><span class="icon">📱</span> 手游 — 本周新游</h2>
+  <p class="section-sub">2026年8月25日–31日重点手游上线情况</p>
+
+  <div class="game-grid">
+
+    <!-- 猫咪和汤：魔法与美食 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/maomao.png" alt="猫咪和汤：魔法与美食" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">猫咪和汤：魔法与美食</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">猫咪和汤：魔法与美食</div>
+        <div class="card-meta">
+          <span>iOS / Android</span><span>8月27日</span><span class="tag tag-new">🆕</span>
+          <span>Neowiz 开发 · 金山世游代理</span>
+        </div>
+        <div class="card-desc">全球下载破 7000 万的治愈系猫咪合成放置游戏国服上线。核心是召唤猫咪、拖拽合成 300+ 魔法食谱、装扮 200+ 萌猫与建造乐园，无高强度对抗，碎片时间轻松玩。TapTap <b>8.8</b> 分，主打软萌解压，是「不爱肝」玩家的治愈首选。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">74</div>
+            <div class="bar bar-heat" style="width:74%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div>
+            <div class="bar bar-s4" style="width:80%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://www.taptap.cn/app/757799" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- 宙斯：傲慢之神 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/zeus.jpg" alt="宙斯：傲慢之神" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">宙斯：傲慢之神</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">宙斯：傲慢之神 <span class="cn">（韩服）</span></div>
+        <div class="card-meta">
+          <span>PC / 移动端</span><span>8月26日</span><span class="tag tag-new">🆕</span>
+          <span>A-Button 开发 · Com2uS 发行</span>
+        </div>
+        <div class="card-desc">由前 NEXON 副总裁金大勋带队的 UE5 希腊神话题材 MMORPG，8 月 26 日韩国公测，18 小时即登顶韩区 App Store / Google Play 双榜，成为 2026 下半年首款现象级 MMO。创新「AI 分身」离线挂机 + 跨服交易所 + 轻氪策略（商城仅售外观），国内暂未代理，需挂韩服加速器体验。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">78</div>
+            <div class="bar bar-heat" style="width:78%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div>
+            <div class="bar bar-s3" style="width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://news.17173.com/content/08272026/141113667.shtml" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          17173 资讯页
+        </a>
+      </div>
+    </div>
+
+    <!-- 乱弹三国志 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/luandan.jpg" alt="乱弹三国志" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">乱弹三国志</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">乱弹三国志</div>
+        <div class="card-meta">
+          <span>iOS / Android</span><span>8月29日</span><span class="tag tag-new">🆕</span>
+          <span>神魔三国放置卡牌</span>
+        </div>
+        <div class="card-desc">神魔三国题材放置卡牌，百位名将解锁「神魔」双形态觉醒，主打佛系挂机、离线收菜与五行相克/兵阵羁绊。福利凶猛（首日送 8 星小乔、累计 5 万抽、每日 648 代金券），但属典型氪金养成卡牌，适合放置养老玩家，深度策略党慎入。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--sub)">60</div>
+            <div class="bar bar-heat" style="width:60%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">推荐评级</div>
+            <div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div>
+            <div class="bar bar-s2" style="width:40%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://www.taptap.cn/app/355524" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 商店页
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== 热门测试/预约 ===== -->
+<section class="section">
+  <h2 class="section-title"><span class="icon">🔬</span> 手游 — 热门测试 / 关注</h2>
+
+  <div class="upcoming-list">
+    <div class="upcoming-item">
+      <span class="tag tag-hot">7000万预约</span>
+      <span class="upcoming-name">王者万象棋</span>
+      <span style="font-size:.8em;color:var(--sub)">腾讯 · 王者荣耀IP自走棋 · 9月10日全平台公测</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 92</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="tag tag-hot">3000万预约</span>
+      <span class="upcoming-name">异人之下</span>
+      <span style="font-size:.8em;color:var(--sub)">腾讯魔方 · 一人之下IP · 3D格斗 · 预计10月公测</span>
+      <span class="upcoming-heat" style="color:var(--accent2)">热度 88</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="tag tag-new">预约中</span>
+      <span class="upcoming-name">王国保卫战6：新启程</span>
+      <span style="font-size:.8em;color:var(--sub)">Ironhide 经典塔防续作 · 移动/Steam 9月上线</span>
+      <span class="upcoming-heat" style="color:var(--accent)">热度 72</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="tag tag-new">首测中</span>
+      <span class="upcoming-name">仙境传说3</span>
+      <span style="font-size:.8em;color:var(--sub)">B站代理 · Gravity 研发 · 8月27日国服首测 · RO正统续作</span>
+      <span class="upcoming-heat" style="color:var(--accent)">热度 70</span>
+    </div>
+    <div class="upcoming-item">
+      <span class="tag tag-new">预约中</span>
+      <span class="upcoming-name">霓虹深渊2</span>
+      <span style="font-size:.8em;color:var(--sub)">肉鸽爽游续作 · 移动+PC端 · 秋季上线</span>
+      <span class="upcoming-heat" style="color:var(--sub)">热度 68</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 下半年TOP10 ===== -->
+<section class="section" id="sec-top10">
+  <h2 class="section-title"><span class="icon">🏆</span> 下半年最受期待 TOP10</h2>
+  <p class="section-sub">基于全网关注度、预购量、搜索热度综合评定</p>
+
+  <div class="top10-grid">
+    <div class="top10-item">
+      <div class="top10-rank">1</div>
+      <div class="top10-info">
+        <div class="top10-name">Grand Theft Auto VI（侠盗猎车手6）</div>
+        <div class="top10-meta">11月19日 · PS5 / Xbox · Rockstar</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">100</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">2</div>
+      <div class="top10-info">
+        <div class="top10-name">Marvel's Wolverine（漫威金刚狼）</div>
+        <div class="top10-meta">9月15日 · PS5 独占 · Insomniac</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">97</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">3</div>
+      <div class="top10-info">
+        <div class="top10-name">Phantom Blade Zero（影之刃零）</div>
+        <div class="top10-meta">10月29日 · PC / PS5 · 灵游坊</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">92</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">4</div>
+      <div class="top10-info">
+        <div class="top10-name">Onimusha: Way of the Sword（鬼武者：剑之道）</div>
+        <div class="top10-meta">9月4日 · PC / PS5 / Xbox · Capcom</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">85</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">5</div>
+      <div class="top10-info">
+        <div class="top10-name">The Blood of Dawnwalker（黎明行者之血）</div>
+        <div class="top10-meta">9月3日 · PC / PS5 / Xbox · Rebel Wolves</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">84</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">6</div>
+      <div class="top10-info">
+        <div class="top10-name">Control Resonant（控制：共振）</div>
+        <div class="top10-meta">9月24日 · PC / PS5 / Xbox · Remedy</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">83</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">7</div>
+      <div class="top10-info">
+        <div class="top10-name">Gears of War: E-Day（战争机器：事变日）</div>
+        <div class="top10-meta">10月6日 · PC / Xbox · The Coalition</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">82</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">8</div>
+      <div class="top10-info">
+        <div class="top10-name">Fire Emblem: Fortune's Weave</div>
+        <div class="top10-meta">9月17日 · Switch 2 独占 · Nintendo</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent2)">81</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">9</div>
+      <div class="top10-info">
+        <div class="top10-name">Silent Hill: Townfall（寂静岭：镇落）</div>
+        <div class="top10-meta">9月24日 · PC / PS5 · Konami</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent)">80</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">10</div>
+      <div class="top10-info">
+        <div class="top10-name">Ace Combat 8（皇牌空战8）</div>
+        <div class="top10-meta">10月2日 · PC / PS5 / Xbox · Bandai Namco</div>
+      </div>
+      <div class="top10-heat" style="color:var(--accent)">75</div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <p>每周新游推荐 · 2026年8月31日 · 第37周</p>
+  <p style="margin-top:4px">数据来源：Steam · Metacritic · TapTap · IGN · GamesRadar · 17173 等</p>
+  <p style="margin-top:4px"><a href="https://tristanchan2020.github.io/weekly-games/">查看往期报告</a></p>
+</footer>
+
+</div>
+
+<button class="back2top" id="back2top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="回到顶部">↑</button>
+
+<script>
+// Back to top
+const btn = document.getElementById('back2top');
+window.addEventListener('scroll',()=>{
+  btn.classList.toggle('show', window.scrollY > 600);
+});
+
+// Active nav on scroll
+const sections = document.querySelectorAll('.section-title[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let current = '';
+  sections.forEach(s=>{
+    if(window.scrollY >= s.offsetTop - 100) current = s.id;
+  });
+  navLinks.forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+
+</body>
+</html>
