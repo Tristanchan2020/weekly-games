@@ -44,26 +44,30 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
 .section-sub{color:var(--sub);font-size:.85em;margin-bottom:18px}
 
 /* grid */
-.game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:18px;margin-bottom:10px}
-.game-card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s}
+.game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;margin-bottom:10px}
+.game-card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
 .game-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.35)}
 
-.card-img{width:100%;height:160px;object-fit:cover;background:linear-gradient(135deg,#1a1a2e,#2a1a3e);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:.8em;position:relative}
+.card-img{width:100%;height:200px;object-fit:cover;background:linear-gradient(135deg,#1a1a2e,#2a1a3e);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:.8em;position:relative;flex-shrink:0}
 .card-img img{width:100%;height:100%;object-fit:cover}
 .card-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e1e30,#2e1e40);color:var(--sub);font-size:.82em;text-align:center;padding:10px}
 
-.card-body{padding:18px 22px 22px}
-.card-title{font-size:1.08em;font-weight:700;margin-bottom:4px;line-height:1.35}
-.card-title .cn{color:var(--accent)}
-.card-meta{font-size:.78em;color:var(--sub);margin-bottom:10px;display:flex;flex-wrap:wrap;gap:6px}
-.card-meta span{background:rgba(255,255,255,.05);padding:2px 8px;border-radius:4px}
-.card-desc{font-size:.92em;line-height:1.7;color:#c2c2cc;margin-bottom:12px}
+.card-body{padding:18px 22px 22px;flex:1;display:flex;flex-direction:column}
+.card-title{font-size:1.18em;font-weight:700;margin-bottom:12px;line-height:1.3;letter-spacing:.01em}
+.card-title .cn{color:var(--accent);font-weight:700}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.card-tag{display:inline-flex;align-items:center;gap:3px;padding:3px 10px;border:1px solid var(--border);border-radius:6px;font-size:.74em;color:var(--sub);background:rgba(255,255,255,.02);line-height:1.4}
+.card-tag.platform{color:var(--text);font-weight:500}
+.card-tag.new{border-color:rgba(46,213,115,.4);color:var(--green);background:rgba(46,213,115,.08)}
+.card-tag.ea{border-color:rgba(0,206,201,.4);color:var(--teal);background:rgba(0,206,201,.08)}
+.card-studio{padding:4px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.76em;color:var(--sub);margin-bottom:12px;display:inline-flex;align-items:center;align-self:flex-start}
+.card-desc{font-size:.92em;line-height:1.7;color:#c2c2cc;margin-bottom:16px}
 
-.card-indices{display:flex;gap:14px;margin-bottom:10px;flex-wrap:wrap}
-.card-index{flex:1;min-width:100px}
-.card-index .label{font-size:.72em;color:#b4b4c4;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
-.card-index .val{font-size:1.15em;font-weight:700}
-.card-index .bar{height:4px;border-radius:2px;margin-top:4px;transition:width .6s ease}
+.card-indices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;padding-top:12px;border-top:1px solid var(--border)}
+.card-index{display:flex;flex-direction:column;gap:5px}
+.card-index .label{font-size:.72em;color:#b4b4c4;letter-spacing:.5px}
+.card-index .val{font-size:1.4em;font-weight:800;line-height:1.1}
+.card-index .bar{height:4px;border-radius:2px;transition:width .6s ease}
 
 .bar-heat{background:linear-gradient(90deg,#ffa502,#ff4757)}
 .bar-s5{background:var(--green)}
@@ -73,9 +77,9 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
 .bar-s1{background:var(--pink)}
 
 .rating-stars{font-size:1.05em;letter-spacing:1px}
-.rating-text{font-size:.78em;margin-left:4px}
+.rating-text{font-size:.78em;margin-left:4px;font-weight:600}
 
-.card-link{display:inline-flex;align-items:center;gap:4px;font-size:.82em;color:var(--teal);margin-top:6px;transition:color .2s}
+.card-link{display:inline-flex;align-items:center;gap:4px;font-size:.82em;color:var(--teal);margin-top:auto;padding-top:8px;transition:color .2s}
 .card-link:hover{color:var(--accent)}
 .card-link svg{width:14px;height:14px}
 
@@ -181,10 +185,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Star Wars Zero Company <span class="cn">（星球大战：零号连队）</span></div>
-        <div class="card-meta">
-          <span>PC / PS5 / Xbox Series</span><span>8月27日</span><span class="tag tag-new">🆕</span>
-          <span>Bit Reactor / Respawn / 卢卡斯影业</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox Series</span>
+          <span class="card-tag">8月27日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Bit Reactor / Respawn / 卢卡斯影业</div>
         <div class="card-desc">XCOM 老将 Bit Reactor 打造的克隆人战争末期回合制战术，堪称本周口碑黑马。MC <b>85</b>（PC）/84（PS5）、OpenCritic <b>87</b>，IGN 给 9/10，还有两家媒体打出满分。8 大星战种族自定义「操作员」、永久死亡机制、电影级叙事是最大亮点；少数批评集中在部分过场与镜头细节。$49.99，星战与战术双厨必入。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -213,10 +219,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Metal Gear Solid: Master Collection Vol.2 <span class="cn">（合金装备：大师合集 Vol.2）</span></div>
-        <div class="card-meta">
-          <span>PC / PS5 / Xbox / Switch / Switch 2</span><span>8月27日</span><span class="tag tag-new">🆕</span>
-          <span>Konami</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox / Switch / Switch 2</span>
+          <span class="card-tag">8月27日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Konami</div>
         <div class="card-desc">《合金装备 4：爱国者之枪》首次离开 PS3，连同 PSP 衍生作《和平行者》（HD 化、支持最多 6 人线上合作）与《幽灵巴别塔》打包登陆现代平台，并附赠原声等数字特典。对老玩家而言是「补完幻影」级别的收藏，全平台同步推出。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -245,10 +253,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Aliens: Fireteam Elite 2 <span class="cn">（异形：火力精英2）</span></div>
-        <div class="card-meta">
-          <span>PC / PS5 / Xbox Series</span><span>8月25日</span><span class="tag tag-new">🆕</span>
-          <span>Cold Iron Studios / Daybreak</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox Series</span>
+          <span class="card-tag">8月25日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Cold Iron Studios / Daybreak</div>
         <div class="card-desc">续作加入第四人、更聪明的异形与可自定义的「专家」职业，主打四人小队共斗刷潮。但首发口碑两极：Steam 从「多半差评」爬回「褒贬不一」（约 53% 好评），卡顿掉帧、优化与 $49.99 定价是最大争议。核心爽点在线，但建议观望后续补丁或等折扣。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -277,10 +287,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Resonance: A Plague Tale Legacy <span class="cn">（共鸣：瘟疫传说传承）</span></div>
-        <div class="card-meta">
-          <span>PC / PS5 / Xbox Series</span><span>8月27日</span><span class="tag tag-new">🆕</span>
-          <span>Asobo Studio</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox Series</span>
+          <span class="card-tag">8月27日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Asobo Studio</div>
         <div class="card-desc">《瘟疫传说》第三作，剧情前传、设定在《安魂曲》的 15 年前，主角换为少女 Sophia，前往「米诺陶之岛」直面古老诅咒。Asobo 这次大胆打破系列潜行公式，转向刀剑近战。画面氛围依旧顶级，但玩法转向能否成立尚待玩家检验。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -309,10 +321,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Elden Ring: Tarnished Edition <span class="cn">（艾尔登法环：褪色者版）</span></div>
-        <div class="card-meta">
-          <span>Switch 2 独占</span><span>8月28日</span><span class="tag tag-new">🆕</span>
-          <span>FromSoftware / Bandai Namco</span>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2 独占</span>
+          <span class="card-tag">8月28日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">FromSoftware / Bandai Namco</div>
         <div class="card-desc">年度现象级开放世界魂系首次登陆 Switch 2，合集版内含《艾尔登法环》本体与《黄金树幽影》DLC，支持掌机/底座双模式。能在便携设备上跑「交界地」，本身即是卖点，是本作首次脱离 PC/主机独占的里程碑版本。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -341,10 +355,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">1666: Amsterdam <span class="cn">（1666：阿姆斯特丹）</span></div>
-        <div class="card-meta">
-          <span>PC（抢先体验）</span><span>8月25日</span><span class="tag tag-ea">🔬 EA</span>
-          <span>Patrice Désilets</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC（抢先体验）</span>
+          <span class="card-tag">8月25日</span>
+          <span class="card-tag ea">🔬 EA 抢先体验</span>
         </div>
+        <div class="card-studio">Patrice Désilets</div>
         <div class="card-desc">《刺客信条》联合创始人 Patrice Désilets 沉淀多年的「白月光」项目终于面世（抢先体验）。白天在 17 世纪阿姆斯特丹查案，夜晚潜入暗巷猎魔，题材与氛围独树一帜。作为 EA 阶段作品，内容与优化仍在完善，适合抢先试玩的探索型玩家。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -373,10 +389,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Brigandine: Abyss <span class="cn">（幻想大陆战记 深渊）</span></div>
-        <div class="card-meta">
-          <span>PC / PS5 / Xbox / Switch 2</span><span>8月26日</span><span class="tag tag-new">🆕</span>
-          <span>Matrix Software</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox / Switch 2</span>
+          <span class="card-tag">8月26日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Matrix Software</div>
         <div class="card-desc">经典策略系列新作，把「大地图 4X 战略」与「六角格战术 RPG」结合，玩家择六大势力之一对抗深渊帝国。介于《火焰纹章》的规模与《全面战争》的复杂度之间，属于日式策略老饕的菜，已有试玩版可先上手。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -405,10 +423,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">Captain Tsubasa 2: World Fighters <span class="cn">（队长小翼2 世界群星）</span></div>
-        <div class="card-meta">
-          <span>PC / PS5 / Xbox / Switch</span><span>8月28日</span><span class="tag tag-new">🆕</span>
-          <span>Bandai Namco</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox / Switch</span>
+          <span class="card-tag">8月28日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Bandai Namco</div>
         <div class="card-desc">《足球小将》改编足球对战续作，延续系列招牌的「必杀技」式热血足球演出，汇聚世界各地明星球员组队竞技。IP 粉与休闲体育游戏玩家可关注，属于强粉丝向作品。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -499,10 +519,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">猫咪和汤：魔法与美食</div>
-        <div class="card-meta">
-          <span>iOS / Android</span><span>8月27日</span><span class="tag tag-new">🆕</span>
-          <span>Neowiz 开发 · 金山世游代理</span>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span>
+          <span class="card-tag">8月27日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">Neowiz 开发 · 金山世游代理</div>
         <div class="card-desc">全球下载破 7000 万的治愈系猫咪合成放置游戏国服上线。核心是召唤猫咪、拖拽合成 300+ 魔法食谱、装扮 200+ 萌猫与建造乐园，无高强度对抗，碎片时间轻松玩。TapTap <b>8.8</b> 分，主打软萌解压，是「不爱肝」玩家的治愈首选。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -531,10 +553,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">宙斯：傲慢之神 <span class="cn">（韩服）</span></div>
-        <div class="card-meta">
-          <span>PC / 移动端</span><span>8月26日</span><span class="tag tag-new">🆕</span>
-          <span>A-Button 开发 · Com2uS 发行</span>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / 移动端</span>
+          <span class="card-tag">8月26日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">A-Button 开发 · Com2uS 发行</div>
         <div class="card-desc">由前 NEXON 副总裁金大勋带队的 UE5 希腊神话题材 MMORPG，8 月 26 日韩国公测，18 小时即登顶韩区 App Store / Google Play 双榜，成为 2026 下半年首款现象级 MMO。创新「AI 分身」离线挂机 + 跨服交易所 + 轻氪策略（商城仅售外观），国内暂未代理，需挂韩服加速器体验。</div>
         <div class="card-indices">
           <div class="card-index">
@@ -563,10 +587,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
       </div>
       <div class="card-body">
         <div class="card-title">乱弹三国志</div>
-        <div class="card-meta">
-          <span>iOS / Android</span><span>8月29日</span><span class="tag tag-new">🆕</span>
-          <span>神魔三国放置卡牌</span>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span>
+          <span class="card-tag">8月29日</span>
+          <span class="card-tag new">🆕 新上线</span>
         </div>
+        <div class="card-studio">神魔三国放置卡牌</div>
         <div class="card-desc">神魔三国题材放置卡牌，百位名将解锁「神魔」双形态觉醒，主打佛系挂机、离线收菜与五行相克/兵阵羁绊。福利凶猛（首日送 8 星小乔、累计 5 万抽、每日 648 代金券），但属典型氪金养成卡牌，适合放置养老玩家，深度策略党慎入。</div>
         <div class="card-indices">
           <div class="card-index">
