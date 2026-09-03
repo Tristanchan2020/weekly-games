@@ -457,54 +457,251 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
   <h2 class="section-title"><span class="icon">⏳</span> PC / 主机 — 下周及近期</h2>
   <p class="section-sub">9月起即将上线，以及近期值得关注的作品</p>
 
-  <div class="upcoming-list">
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/3</span>
-      <span class="upcoming-badge">🔥 互动</span>
-      <span class="upcoming-name">The Blood of Dawnwalker<span class="cn">（黎明行者之血）</span></span>
-      <span class="upcoming-platform">PC / PS5 / Xbox Series · Rebel Wolves（巫师3总监创立）</span>
-      <span class="upcoming-heat" style="color:var(--accent2)">热度 84</span>
-    </div>
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/4</span>
-      <span class="upcoming-name">Onimusha: Way of the Sword<span class="cn">（鬼武者：剑之道）</span></span>
-      <span class="upcoming-platform">PC / PS5 / Xbox · Capcom</span>
-      <span class="upcoming-heat" style="color:var(--accent2)">热度 85</span>
-    </div>
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/9</span>
-      <span class="upcoming-name">Valheim 1.0<span class="cn">（英灵神殿）</span></span>
-      <span class="upcoming-platform">PC / Xbox Series · 结束抢先体验</span>
-      <span class="upcoming-heat" style="color:var(--accent)">热度 70</span>
-    </div>
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/15</span>
-      <span class="upcoming-name">Marvel's Wolverine<span class="cn">（漫威金刚狼）</span></span>
-      <span class="upcoming-platform">PS5 独占 · Insomniac</span>
-      <span class="upcoming-heat" style="color:var(--accent2)">热度 97</span>
-    </div>
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/17</span>
-      <span class="upcoming-name">Fire Emblem: Fortune's Weave</span>
-      <span class="upcoming-platform">Switch 2 独占 · Nintendo / Intelligent Systems</span>
-      <span class="upcoming-heat" style="color:var(--accent2)">热度 82</span>
-    </div>
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/24</span>
-      <span class="upcoming-name">Silent Hill: Townfall<span class="cn">（寂静岭：镇落）</span></span>
-      <span class="upcoming-platform">PC / PS5 · Konami</span>
-      <span class="upcoming-heat" style="color:var(--accent2)">热度 80</span>
-    </div>
-    <div class="upcoming-item">
-      <span class="upcoming-date">9/24</span>
-      <span class="upcoming-name">Control Resonant<span class="cn">（控制：共振）</span></span>
-      <span class="upcoming-platform">PC / PS5 / Xbox · Remedy</span>
-      <span class="upcoming-heat" style="color:var(--accent2)">热度 83</span>
-    </div>
-  </div>
-</section>
+  <div class="game-grid">
 
-<!-- ===== 手游 ===== -->
+    <!-- The Blood of Dawnwalker -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/dawnwalker.jpg" alt="黎明行者之血" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">黎明行者之血</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Blood of Dawnwalker <span class="cn">（黎明行者之血）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox Series</span>
+          <span class="card-tag">9月3日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+          <span class="card-tag" style="border-color:rgba(255,71,87,.4);color:var(--accent2);background:rgba(255,71,87,.08)">🔥 互动</span>
+        </div>
+        <div class="card-studio">Rebel Wolves（前巫师3总监创立，200 人）</div>
+        <div class="card-desc">CDPR 前《巫师 3》总监 Konrad Tomaszkiewicz 领衔的初代黑暗幻想开放世界 RPG。主角 Santior 为吸血鬼，前 30 分钟会做出不可逆的"血统承诺"——决定后续 25 小时里是「白天普通人」还是「夜晚猎杀者」双形态走向；UE5 打造、即时 + 叙事战斗混合，首发同步进 XGP。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">84</div>
+            <div class="bar bar-heat" style="width:84%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 即将解锁</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:85%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://www.playstation.com/zh-hans-hk/games/the-blood-of-dawnwalker/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          PlayStation 资讯页
+        </a>
+      </div>
+    </div>
+
+    <!-- Onimusha Way of the Sword -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/onimusha.jpg" alt="鬼武者：剑之道" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">鬼武者：剑之道</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Onimusha: Way of the Sword <span class="cn">（鬼武者：剑之道）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox Series</span>
+          <span class="card-tag">9月4日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+        </div>
+        <div class="card-studio">Capcom（鬼武者系列暌违 19 年正统续作）</div>
+        <div class="card-desc">Capcom 鬼武者系列暌违 19 年的正统续作，由《鬼泣》系列制作人冈部明辉领军。明治维新时期京都为舞台，主角宫本武弘（半子）持刀对抗妖魔，强调"弹刀"反击 + 现代 3A 画面，IGN 试玩称其为"令和版鬼武者"。同步上 Steam，开启国产配音首秀。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">85</div>
+            <div class="bar bar-heat" style="width:85%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 即将解锁</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:90%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/2638890/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Valheim 1.0 -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/valheim.jpg" alt="英灵神殿" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">英灵神殿 1.0</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Valheim <span class="cn">（英灵神殿 1.0 正式版）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / Xbox Series</span>
+          <span class="card-tag">9月9日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+          <span class="card-tag ea">🔬 正式版</span>
+        </div>
+        <div class="card-studio">Iron Gate AB · Coffee Stain Publishing</div>
+        <div class="card-desc">销量 1500 万、Steam 抢先体验 5 年半后终于上线正式版 1.0。新增 Ashlands（第 6 大生态"灰烬之地"）、终局 Boss「火焰女王 The Queen」、船坞升级系统与新工艺树。MC PC 暂挂 82，差评集中在 EA 末期的性能优化。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent)">70</div>
+            <div class="bar bar-heat" style="width:70%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 即将解锁</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:95%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/892970/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Marvel's Wolverine -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/wolverine.jpg" alt="漫威金刚狼" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">漫威金刚狼</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Marvel's Wolverine <span class="cn">（漫威金刚狼）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5</span>
+          <span class="card-tag" style="border-color:rgba(166,166,184,.4);color:var(--sub);background:rgba(166,166,184,.06)">🔒 主机独占</span>
+          <span class="card-tag">9月15日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+        </div>
+        <div class="card-studio">Insomniac Games（继《蜘蛛侠 2》后第二款漫威 3A）</div>
+        <div class="card-desc">Insomniac 蜘蛛侠团队第二款漫威 IP 3A 动作。R 级暴力基调，金刚狼 Logan 穿时空穿梭追猎变种人谜团，"阿达曼合金爪撕肉战斗" + 暴力终结技为卖点；与《复仇者联盟》《蜘蛛侠 2》共享同一"漫威纽约"宇宙，剧情跨越多个节点。预购破 Insomniac 纪录，限时独占 PS5 一年。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">97</div>
+            <div class="bar bar-heat" style="width:97%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 12 天</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:80%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://www.playstation.com/en-us/games/marvels-wolverine/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          PlayStation 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Fire Emblem Fortune's Weave -->
+    <div class="game-card">
+      <div class="card-img">
+        <div class="card-img-placeholder" style="display:flex">Fire Emblem: Fortune's Weave<br><span style="font-size:.8em;margin-top:6px;color:var(--accent)">🗡️ Switch 2 独占</span></div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Fire Emblem: Fortune's Weave <span class="cn">（火焰纹章：命运的织线）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span>
+          <span class="card-tag" style="border-color:rgba(166,166,184,.4);color:var(--sub);background:rgba(166,166,184,.06)">🔒 主机独占</span>
+          <span class="card-tag">9月17日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+        </div>
+        <div class="card-studio">Nintendo × Intelligent Systems</div>
+        <div class="card-desc">火纹系列 Switch 2 首部正传，主打"叙事分支 × 即时战略"双系统：告别 35 年回合制传统，转向类似《最终幻想战略版》但保留"武器耐久/三角克制"核心的即时制战斗；4K 30fps 旗舰画质、双主角双线剧本、"命运织线"分支系统（抉择影响整张大地图走向）。Nintendo Direct 已释出 30 分钟实机。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">82</div>
+            <div class="bar bar-heat" style="width:82%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 14 天</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:78%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://www.nintendo.com/jp/switch2/fire-emblem-fortunes-weave/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Nintendo 官网
+        </a>
+      </div>
+    </div>
+
+    <!-- Silent Hill Townfall -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/silent_hill.jpg" alt="寂静岭：镇落" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">寂静岭：镇落</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Silent Hill: Townfall <span class="cn">（寂静岭：镇落）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5</span>
+          <span class="card-tag">9月24日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+        </div>
+        <div class="card-studio">Konami · Screenless 联合开发</div>
+        <div class="card-desc">Konami 自营 + 外部团队 Screenless（由《P.T.》核心设计师领衔）制作，首个全实机探索的"开放街区"寂静岭。设定在英国小镇 Castle Rock，玩家在固定公寓 + 周边 5 个街区中循环往返；融合《P.T.》的随机事件设计，每轮回合的邻居、NPC 行为都不同，IGN 称"近年来最被低估的恐怖 IP"。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">80</div>
+            <div class="bar bar-heat" style="width:80%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 21 天</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/1636440/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+    <!-- Control Resonant -->
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/control_resonant.jpg" alt="控制：共振" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+        <div class="card-img-placeholder" style="display:none">控制：共振</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Control Resonant <span class="cn">（控制：共振）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Xbox Series</span>
+          <span class="card-tag">9月24日</span>
+          <span class="card-tag new">⏳ 待上线</span>
+        </div>
+        <div class="card-studio">Remedy Entertainment（《Alan Wake 2》同一工作室）</div>
+        <div class="card-desc">Control 正统续作（不是 DLC），老联邦控制局在新区域"共振层 Resonant Layer"展开，Jesse 掌握新能力"心智同步"可同时操控多个 NPC 协同作战；战斗系统进化为"双武器 × 心智同步"组合，Remedy 标志性的"剧情与玩法交织"叙事继续由 Sam Lake 担纲总监；与 Alan Wake 2 共享同一 Remedy Connected Universe 时间线。</div>
+        <div class="card-indices">
+          <div class="card-index">
+            <div class="label">热度指数</div>
+            <div class="val" style="color:var(--accent2)">83</div>
+            <div class="bar bar-heat" style="width:83%"></div>
+          </div>
+          <div class="card-index">
+            <div class="label">距离上线</div>
+            <div class="val" style="color:var(--teal);font-size:1.1em">⚔️ 21 天</div>
+            <div class="bar" style="background:linear-gradient(90deg,var(--teal),var(--accent));width:60%"></div>
+          </div>
+        </div>
+        <a class="card-link" href="https://store.steampowered.com/app/3669870/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ===== 手游 ===== -->
 <section class="section" id="sec-mobile">
   <h2 class="section-title"><span class="icon">📱</span> 手游 — 本周新游</h2>
   <p class="section-sub">2026年8月25日–31日重点手游上线情况</p>
