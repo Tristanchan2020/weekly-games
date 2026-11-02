@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每周新游推荐 — 2026年11月2日</title>
+<style>
+:root{
+  --bg:#0d0d14; --card:#16161f; --text:#e8e8ee; --sub:#a6a6b8;
+  --accent:#ffa502; --accent2:#ff4757; --green:#2ed573; --teal:#00cec9;
+  --pink:#ff6b81; --border:#252530;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.6}
+a{color:var(--teal);text-decoration:none;transition:color .2s}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+
+.top-nav{position:sticky;top:0;z-index:100;background:rgba(13,13,20,.85);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,.06);padding:14px 0}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:24px;padding:0 28px}
+.nav-logo{font-weight:700;font-size:1.1em;color:var(--text);white-space:nowrap}
+.nav-logo span{color:var(--accent)}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap}
+.nav-links a{padding:6px 16px;border-radius:20px;font-size:.88em;color:var(--sub);transition:all .2s;white-space:nowrap}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.08);color:var(--text)}
+.nav-links a:focus-visible{outline:2px solid var(--accent)}
+
+.container{max-width:1200px;margin:0 auto;padding:0 28px}
+
+.page-header{text-align:center;padding:48px 0 24px}
+.page-header h1{font-size:2em;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.page-header .date{color:var(--sub);font-size:.92em;margin-top:8px}
+.page-header .desc{color:var(--sub);font-size:.85em;margin-top:4px;max-width:640px;margin-inline:auto}
+.page-header .legend{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:.75em;color:var(--sub)}
+.legend-item{display:flex;align-items:center;gap:5px}
+.legend-dot{width:8px;height:8px;border-radius:50%}
+
+.notice{background:rgba(255,165,2,.08);border:1px solid rgba(255,165,2,.25);border-radius:12px;padding:14px 20px;margin:20px 0 4px;font-size:.86em;color:#d8d8e2;line-height:1.7}
+.notice b{color:var(--accent)}
+
+.section{margin:36px 0;scroll-margin-top:70px}
+.section-title{font-size:1.45em;font-weight:700;margin-bottom:6px;padding-bottom:10px;border-bottom:2px solid var(--border);display:flex;align-items:center;gap:10px;scroll-margin-top:70px}
+.section-title .icon{font-size:1.3em}
+.section-sub{color:var(--sub);font-size:.85em;margin-bottom:18px}
+.sub-title{font-size:1.02em;font-weight:700;color:var(--text);margin:22px 0 12px;padding-left:10px;border-left:3px solid var(--accent);line-height:1.3}
+
+.game-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px;margin-bottom:10px}
+.game-card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid var(--border);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.game-card:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+
+.card-img{width:100%;height:200px;object-fit:cover;background:linear-gradient(135deg,#1a1a2e,#2a1a3e);display:flex;align-items:center;justify-content:center;color:var(--sub);font-size:.8em;position:relative;flex-shrink:0}
+.card-img img{width:100%;height:100%;object-fit:cover}
+.card-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#1e1e30,#2e1e40);color:var(--sub);font-size:.82em;text-align:center;padding:10px}
+
+.card-body{padding:18px 22px 22px;flex:1;display:flex;flex-direction:column}
+.card-title{font-size:1.18em;font-weight:700;margin-bottom:12px;line-height:1.3;letter-spacing:.01em}
+.card-title .cn{color:var(--accent);font-weight:700}
+.card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.card-tag{display:inline-flex;align-items:center;gap:3px;padding:3px 10px;border:1px solid var(--border);border-radius:6px;font-size:.74em;color:var(--sub);background:rgba(255,255,255,.02);line-height:1.4}
+.card-tag.platform{color:var(--text);font-weight:500}
+.card-tag.new{border-color:rgba(46,213,115,.4);color:var(--green);background:rgba(46,213,115,.08)}
+.card-tag.ea{border-color:rgba(0,206,201,.4);color:var(--teal);background:rgba(0,206,201,.08)}
+.card-studio{padding:4px 10px;background:rgba(255,255,255,.04);border-radius:6px;font-size:.76em;color:var(--sub);margin-bottom:12px;display:inline-flex;align-items:center;align-self:flex-start}
+.card-desc{font-size:.92em;line-height:1.7;color:#c2c2cc;margin-bottom:16px}
+
+.card-indices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;padding-top:12px;border-top:1px solid var(--border)}
+.card-indices.one{grid-template-columns:1fr}
+.card-index{display:flex;flex-direction:column;gap:5px}
+.card-index .label{font-size:.72em;color:#b4b4c4;letter-spacing:.5px}
+.card-index .val{font-size:1.4em;font-weight:800;line-height:1.1}
+.card-index .bar{height:4px;border-radius:2px;transition:width .6s ease}
+
+.bar-heat{background:linear-gradient(90deg,#ffa502,#ff4757)}
+.bar-s5{background:var(--green)}
+.bar-s4{background:var(--teal)}
+.bar-s3{background:var(--accent)}
+.bar-s2{background:var(--sub)}
+.bar-s1{background:var(--pink)}
+
+.rating-stars{font-size:1.05em;letter-spacing:1px}
+.rating-text{font-size:.78em;margin-left:4px;font-weight:600}
+
+.card-link{display:inline-flex;align-items:center;gap:4px;font-size:.82em;color:var(--teal);margin-top:auto;padding-top:8px;transition:color .2s}
+.card-link:hover{color:var(--accent)}
+.card-link svg{width:14px;height:14px}
+
+.back2top{position:fixed;bottom:28px;right:28px;width:44px;height:44px;border-radius:50%;background:var(--card);border:1px solid var(--border);color:var(--sub);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.3em;transition:all .3s;opacity:0;pointer-events:none;z-index:99}
+.back2top.show{opacity:1;pointer-events:auto}
+.back2top:hover{background:rgba(255,255,255,.1);color:var(--text)}
+.back2top:focus-visible{outline:2px solid var(--accent)}
+
+.page-footer{text-align:center;padding:40px 0 28px;color:var(--sub);font-size:.78em;border-top:1px solid var(--border);margin-top:40px}
+.page-footer a{color:var(--sub)}
+
+.top10-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:16px}
+.top10-item{display:flex;gap:14px;padding:14px 18px;background:var(--card);border-radius:12px;border:1px solid var(--border);align-items:center}
+.top10-rank{font-size:1.8em;font-weight:800;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;min-width:40px;text-align:center}
+.top10-info{flex:1}
+.top10-name{font-weight:700;font-size:.95em}
+.top10-name a{color:var(--text)}
+.top10-name a:hover{color:var(--accent)}
+.top10-meta{font-size:.75em;color:var(--sub);margin-top:2px}
+.top10-heat{font-size:.92em;font-weight:700;color:var(--accent2)}
+
+@media(max-width:768px){
+  .game-grid{grid-template-columns:1fr}
+  .top10-grid{grid-template-columns:1fr}
+  .nav-links{overflow-x:auto;flex-wrap:nowrap;padding-bottom:4px}
+  .nav-links a{flex-shrink:0}
+  .page-header h1{font-size:1.5em}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <div class="nav-inner">
+    <div class="nav-logo">🎮 <span>每周新游推荐</span></div>
+    <div class="nav-links">
+      <a href="#sec-pc" class="active">PC / 主机</a>
+      <a href="#sec-mobile">手游</a>
+      <a href="#sec-upcoming">下周及近期</a>
+      <a href="#sec-top10">年末最受期待 TOP10</a>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+<header class="page-header">
+  <h1>每周新游推荐</h1>
+  <div class="date">2026年11月2日 · 第19期</div>
+  <div class="desc">覆盖 PC (Steam)、主机 (Switch 2 / PS5 / Xbox) 与手游 (iOS / Android) 全平台新游动态</div>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-dot" style="background:var(--accent)"></span> 热度指数 0–100</span>
+    <span class="legend-item"><span class="legend-dot" style="background:var(--green)"></span> 推荐评级 ★ 1–5</span>
+    <span class="legend-item"><span style="color:var(--accent)">🆕</span> 新上线</span>
+    <span class="legend-item"><span style="color:var(--teal)">⏳</span> 即将上线 / 抢先体验</span>
+  </div>
+</header>
+
+<div class="notice">
+  📌 <b>本期说明</b>：回顾 <b>10月26日 – 11月1日</b> 上线的新游（PC/主机 33 款、手游 3 款），并整理 <b>11月2日起</b> 的重点待上线与预约作品（PC/主机 45 款、手游 13 款）。热度指数依据媒体曝光、搜索热度、商店愿望单与预约量综合给出（0–100）；推荐评级仅授予<b>已正式上线</b>的作品，<b>待上线与预约期作品不给评级</b>。口碑数据来自 Metacritic、OpenCritic、Steam 用户评价、Game Informer 与 TapTap 评分及厂商公开信息——未做主观臆测，聚合站仍显示 tbd 或样本不足的作品一律如实标注，不编造分数。中文名以 Steam 简体中文商店页 <code>apphub_AppName</code> 为准；主机与手游独占作品采用官方或通行中文译名。本期头牌为国产 3A《影之刃零》：Metacritic PC 88 / PS5 87、OpenCritic 91 且推荐率 100%，Steam 首日同时在线峰值 <b>72.4 万</b>，登顶全球热销榜。
+</div>
+
+<!-- ===== PC / 主机 已上线 ===== -->
+<section class="section" id="sec-pc">
+  <h2 class="section-title"><span class="icon">🖥️</span> PC / 主机 — 已上线新游</h2>
+  <p class="section-sub">10月26日 – 11月1日 · 共 33 款 · 按重要程度排序</p>
+  <div class="game-grid">
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/phantom_blade_zero.jpg" alt="影之刃零" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">影之刃零</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Phantom Blade Zero<span class="cn">（影之刃零）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">灵游坊十年磨一剑的虚幻5暗黑武侠动作RPG。MC PC 88 / PS5 87，OC 91 且推荐率 100%，IGN 9 分、IGN 中国满分。Steam 首日同时在线峰值 72.4 万（历史第 15、2026 年单机第一），登顶全球热销榜；玩家好评率从首发 78% 回升至 82%「特别好评」。差评集中在不能改键、着色器加载慢与难度偏高。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">98</div><div class="bar bar-heat" style="width:98%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--green)"><span class="rating-stars">★★★★★</span><span class="rating-text">5/5 强烈推荐</span></div><div class="bar bar-s5" style="width:100%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4115450/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/mouthwashing.jpg" alt="缄默祸运" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">缄默祸运</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Mouthwashing<span class="cn">（缄默祸运）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5 / XSX / PS4 / XO / Switch</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">2024 年现象级心理恐怖《Mouthwashing》登陆主机。图尔帕号货运船五名船员被困深空，以非线性叙事拼凑坠船真相。Game Informer 给出 8.75 分，是本周口碑最好的移植作品之一。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">72</div><div class="bar bar-heat" style="width:72%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--green)"><span class="rating-stars">★★★★★</span><span class="rating-text">5/5 强烈推荐</span></div><div class="bar bar-s5" style="width:100%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2475490/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/sword_of_the_sea.jpg" alt="Sword of the Sea" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Sword of the Sea</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Sword of the Sea</div>
+        <div class="card-tags">
+          <span class="card-tag platform">XSX / Switch 2</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">《ABZÛ》《风之旅人》美术总监 Matt Nava 的新作，把滑板 / 滑雪的操控手感搬进沙浪冲浪冒险。GI 8.5 分。主机版新增对 Xbox Series 与 Switch 2 的支持。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">63</div><div class="bar bar-heat" style="width:63%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2453160/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/wolf_among_us_rm.jpg" alt="我们身边的狼：重制版" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">我们身边的狼：重制版</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Wolf Among Us Remastered<span class="cn">（我们身边的狼：重制版）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">Telltale 经典黑色侦探剧的重制版。童话人物栖居的纽约，大灰狼 Bigby 追查连环凶案，选择驱动叙事。原作剧本仍是 Telltale 巅峰之一，重制主要提升画面与演出，玩法层面改动有限。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">66</div><div class="bar bar-heat" style="width:66%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3884860/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/steins_gate_reboot.jpg" alt="命运石之门 RE:BOOT" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">命运石之门 RE:BOOT</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">STEINS;GATE RE:BOOT<span class="cn">（命运石之门 RE:BOOT）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5 / PS4 / Switch / Switch 2</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">志仓千代丸监修、《命运石之门》系列全新重制版，对原作剧本进行补完与现代化重制，画面与演出全面翻新。系列粉丝与想补票的新玩家都值得关注。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">68</div><div class="bar bar-heat" style="width:68%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4012810/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/metro2033_redux.jpg" alt="地铁 2033 / 最后的曙光 重制版" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">地铁 2033 / 最后的曙光 重制版</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Metro Redux<span class="cn">（地铁 2033 / 最后的曙光 重制版）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5 / XSX</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">4A Games 两部末日地铁射击经典的重制合集首次登上本世代主机。莫斯科地下铁道的生存恐怖氛围依旧扎实，是性价比极高的补课选择。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">58</div><div class="bar bar-heat" style="width:58%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/286690/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/guimi_hinokami2.jpg" alt="鬼灭之刃 火之神血风谭2" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">鬼灭之刃 火之神血风谭2</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Demon Slayer -Kimetsu no Yaiba- The Hinokami Chronicles 2<span class="cn">（鬼灭之刃 火之神血风谭2）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">CyberConnect2 开发的鬼灭之刃格斗续作登陆 Switch 2，收录无限城篇之后的角色阵容与双人组队战。粉丝向作品，主机掌机模式体验完整。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">60</div><div class="bar bar-heat" style="width:60%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2928600/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/reka.jpg" alt="蕾卡的移动工坊" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">蕾卡的移动工坊</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">REKA<span class="cn">（蕾卡的移动工坊）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/26</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">以斯拉夫民间传说为灵感的女巫生活模拟。建造并自定义那座会行走的鸡脚小屋，在雾气缭绕的秋日林地采集、制药、驯服动物，并师从芭芭雅嘎学习温和巫术。慢节奏治愈系佳作。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">62</div><div class="bar bar-heat" style="width:62%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/1737870/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/virtue_sledgehammer.jpg" alt="美德与重锤" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">美德与重锤</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Virtue and a Sledgehammer<span class="cn">（美德与重锤）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/27</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">Devolver 发行的叙事探索游戏：回到故乡，用一柄大锤亲手摧毁一切。在令人崩溃的故事里体会「自己已不再属于从小长大的故乡」。Deconstructeam 一贯的尖锐作者性表达。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">60</div><div class="bar bar-heat" style="width:60%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3743260/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/remothered_rednun.jpg" alt="Remothered: Red Nun's Legacy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Remothered: Red Nun's Legacy</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Remothered: Red Nun's Legacy</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2</span> <span class="card-tag">10/27</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">意大利新黄色电影风格生存恐怖三部曲终章。女儿被绑架，你需在追捕中求生，并通过「回溯记忆」、镜面能力与操控飞蛾揭开红修女的真相。氛围一流，操作手感略显陈旧。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">58</div><div class="bar bar-heat" style="width:58%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3335310/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/sulfur.jpg" alt="火湖" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">火湖</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">SULFUR<span class="cn">（火湖）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2 / Switch</span> <span class="card-tag">10/28</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">老派动作冒险射击：智取敌人、搜寻宝藏、改造枪械、驾驭力量。俯视角 + 快节奏交火，美术风格粗粝有辨识度，量足耐玩。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">64</div><div class="bar bar-heat" style="width:64%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2124120/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/culdcept.jpg" alt="卡片召唤师 起源" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">卡片召唤师 起源</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Culdcept BEGINS<span class="cn">（卡片召唤师 起源）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/27</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">融合桌游与卡牌对战的传奇系列《Culdcept》十年后新篇。化身操控卡牌的「召唤师」，用运气与策略在棋盘上占地、收税、击溃对手。硬核策略玩家的心头好，新手门槛偏高。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">52</div><div class="bar bar-heat" style="width:52%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3322630/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/terrible_lizards.jpg" alt="恐怖蜥蜴" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">恐怖蜥蜴</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Terrible Lizards<span class="cn">（恐怖蜥蜴）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">66 号公路旁老旧恐龙景点里的恐怖跑酷。道尔顿恐龙乐园地下潜伏着邪恶存在，靠敏捷身手穿越险峻地形逃生。Behaviour Interactive 参与发行。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">52</div><div class="bar bar-heat" style="width:52%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2920220/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/outlast_trials.jpg" alt="逃出生天：试炼" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">逃出生天：试炼</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Outlast Trials<span class="cn">（逃出生天：试炼）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span> <span class="card-tag">10/27</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">Red Barrels 的多人合作恐怖生存登陆 Switch 2。穆尔科夫公司的人体实验，1–4 人组队完成试炼并逃出生天。掌机便携体验尚可，联机为主要卖点。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/1304930/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/fangtopia.jpg" alt="尖牙乐园" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">尖牙乐园</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Fangtopia<span class="cn">（尖牙乐园）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Switch 2</span> <span class="card-tag">10/26</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">休闲拼图解谜：拼合地形，为友好的妖魔鬼怪打造乐园。温暖治愈、无失败压力，适合碎片时间放松。Secret Mode 发行。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3010170/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/danchi_days.jpg" alt="团地日和" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">团地日和</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Danchi Days<span class="cn">（团地日和）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">平成复古风团地（住宅区）冒险。为患痴呆症的奶奶重办夏日祭，挨家挨户说服个性十足的邻居参加。日式温情小品，文本扎实。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3107530/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/tom_postgirl.jpg" alt="快递员汤姆" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">快递员汤姆</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Tom the Postgirl<span class="cn">（快递员汤姆）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / Switch / Mac</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">ARTE France 发行的叙事游戏：村里新来的女邮差汤姆，用近乎痴迷的紧追不舍去结识居民——说不定你会对他们了解得有点太透彻。荒诞幽默。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">47</div><div class="bar bar-heat" style="width:47%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2257440/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/atm_osfar.jpg" alt="异星遗航" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">异星遗航</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">ATMOSFAR<span class="cn">（异星遗航）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC（抢先体验）</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">浮空岛组成的惊险世界求生探索，揭开人类最后一个前哨站的命运。收集废料打造升级飞行器，支持单人或多人生存。集英社游戏发行，EA 阶段内容待扩充。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/1798230/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/robogal.jpg" alt="Robo娘：冥星任务" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Robo娘：冥星任务</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">RoboGAL: Gaga Delta Lady<span class="cn">（Robo娘：冥星任务）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">充满陷阱的动作平台游戏。冥星陷入危机，帮助蕾宝一路闯关，自由选择关卡顺序、击败 Boss 获取新武器。复古手感，难度不低。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3257150/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/tama_inbetween.jpg" alt="Tama In-Between" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Tama In-Between</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Tama In-Between</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">以能「吸收」「分裂」「附身」的史莱姆猫为主角的动作解谜。在充满机关的异质世界里考验反应与灵活思维。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">44</div><div class="bar bar-heat" style="width:44%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3769030/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/anomalith.jpg" alt="异界揭踪" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">异界揭踪</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">ANOMALITH<span class="cn">（异界揭踪）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Switch 2</span> <span class="card-tag">10/28</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">FURYU 出品的求生 TPS。以带有阈限空间氛围与昭和怀旧感的日本为舞台，少女为寻找失联友人踏入异形横行的世界。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4017880/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/queens_domain.jpg" alt="Queen's Domain" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Queen's Domain</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Queen's Domain</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2</span> <span class="card-tag">10/30</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">主打硬核战斗与穿行探索的复古奇幻动作 RPG。前往尼亚希德岛寻找失踪的父王，沉睡的女王正缓缓苏醒。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/1799840/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/scramble_knights.jpg" alt="乱斗骑士" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">乱斗骑士</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Scramble Knights Online<span class="cn">（乱斗骑士）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / XSX</span> <span class="card-tag">10/26</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">轻量级 MMO 动作 RPG。化身见习骑士探索泰拉科特王国，组队下副本、刷怪、寻宝、打造装备。体量轻、上手快。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2379350/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/space_savory.jpg" alt="Space Savory" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Space Savory</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Space Savory</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/26</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">宇宙虚无中心一家卫生堪忧的餐馆经营游戏，充满黑暗秘密与黑色幽默。别被外表欺骗——可观测宇宙里最美味的味道就在这里烹饪。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">42</div><div class="bar bar-heat" style="width:42%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3760770/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/joe_mac_retro.jpg" alt="战斗原始人 复古合集" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">战斗原始人 复古合集</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Joe &amp; Mac Retro Collection<span class="cn">（战斗原始人 复古合集）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2 / Switch</span> <span class="card-tag">10/28</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">收录三款超级任天堂版《战斗原始人》的复古合集。与巨大恐龙和狡猾穴居人战斗，找回被绑架的部落少女。纯情怀向。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">42</div><div class="bar bar-heat" style="width:42%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3672840/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/croc2_gobbos.jpg" alt="Croc 2: Kingdom of the Gobbos" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Croc 2: Kingdom of the Gobbos</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Croc 2: Kingdom of the Gobbos</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / PS4 / XO / Switch</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">Argonaut 经典 3D 平台跳跃续作重制版。小鳄鱼 Croc 寻找失散父母，探索四个村庄、营救 Gobbo。操作与镜头带有明显年代感。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div><div class="bar bar-s2" style="width:40%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4198360/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/hunting_sim3.jpg" alt="狩猎模拟3" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">狩猎模拟3</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Hunting Simulator 3<span class="cn">（狩猎模拟3）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">Nacon 开放世界狩猎模拟，忠实狗狗陪伴左右，可选官方授权品牌装备。面向狩猎题材爱好者，玩法深度有限。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">46</div><div class="bar bar-heat" style="width:46%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div><div class="bar bar-s2" style="width:40%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2482760/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/cat_in_hat.jpg" alt="戴帽子的猫：雨天大乱斗" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">戴帽子的猫：雨天大乱斗</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Cat in the Hat: Rainy Day Mayhem<span class="cn">（戴帽子的猫：雨天大乱斗）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / PS4 / Switch</span> <span class="card-tag">10/30</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">苏斯博士经典 IP 改编，18 款迷你游戏 + 满屋追捕猫咪，支持单人或多人的合家欢派对游戏。定位低龄家庭向。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div><div class="bar bar-s2" style="width:40%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3465710/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/dog_man.jpg" alt="神探狗狗：汪者归来" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">神探狗狗：汪者归来</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Dog Man: Bark in Action<span class="cn">（神探狗狗：汪者归来）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / PS4 / Switch</span> <span class="card-tag">10/27</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">根据 Dav Pilkey《神探狗狗》改编的横版动作冒险，可操作 10 位各具特殊能力的伙伴，含 BOSS 战与发明系统。儿童向。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">44</div><div class="bar bar-heat" style="width:44%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div><div class="bar bar-s2" style="width:40%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4782240/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/broke_wizards.jpg" alt="Broke Wizards" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Broke Wizards</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Broke Wizards</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">10/28</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">5TH Cell 出品的竞技沙盒派对游戏，2–6 人同玩：与巫师室友痛宰怪物、玩躲猫猫、悬浮板竞速，抢先把房租交给小恶魔房东。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">40</div><div class="bar bar-heat" style="width:40%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div><div class="bar bar-s2" style="width:40%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4398500/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/baobao_cleaning.jpg" alt="Bao Bao's™ Cozy Cleaning Services" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Bao Bao's™ Cozy Cleaning Services</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Bao Bao's™ Cozy Cleaning Services</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / Switch</span> <span class="card-tag">10/28</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">轻松治愈的 2D 高压清洗游戏。清理粉彩场景、伴着 lo-fi 音乐慢慢把一切变干净，没有压力也没有计时。支持最多 4 人。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">40</div><div class="bar bar-heat" style="width:40%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3832380/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/blue_ridge_hunting.jpg" alt="Blue Ridge Hunting" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Blue Ridge Hunting</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Blue Ridge Hunting</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC（抢先体验）</span> <span class="card-tag">10/26</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">阿巴拉契亚山脉的合作恐怖游戏。单人 or 联机调查、记录并狩猎基于真实目击与传说的神秘生物。EA 阶段内容偏少。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">42</div><div class="bar bar-heat" style="width:42%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--sub)"><span class="rating-stars">★★☆☆☆</span><span class="rating-text">2/5 观望</span></div><div class="bar bar-s2" style="width:40%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2434930/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/nms_ios.jpg" alt="无人深空（iOS 版）" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">无人深空（iOS 版）</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">No Man's Sky<span class="cn">（无人深空（iOS 版））</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / iPadOS</span> <span class="card-tag">10/28</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">Hello Games 十年更新一次搬上 iPhone / iPad。完整收录自 2016 年以来 40+ 次重大更新（含 2026 年 COSMOS 7.0），包体不足 5GB，支持手柄键鼠。先试后买，完整版一次性内购 19.99 美元，无额外付费。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">70</div><div class="bar bar-heat" style="width:70%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/275850/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 手游 已上线 ===== -->
+<section class="section" id="sec-mobile">
+  <h2 class="section-title"><span class="icon">📱</span> 手游 — 已上线新游</h2>
+  <p class="section-sub">10月26日 – 11月1日 · 共 3 款 · 按重要程度排序</p>
+  <div class="game-grid">
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_mh_outlanders.jpg" alt="怪物猎人：旅人" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">怪物猎人：旅人</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Monster Hunter Outlanders<span class="cn">（怪物猎人：旅人）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android（国际服）</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">卡普空授权 / 监修、腾讯天美研发的怪猎 IP 首款移动端开放世界狩猎作，Garena 负责海外发行。舞台为无缝大地图「埃索岛」，保留追踪—狩猎—采集—打造的系列核心循环，加入滑翔、攀爬与自制滑索等探索机制。上线版本含大剑、太刀、双刀、大锤、长枪、重弩、弓与斩击斧，支持 4 人共斗与 16 人突袭；首发怪物含灭尽龙、苍火龙及原创融光种。全球预约突破 1500 万，19 国免费榜登顶。中国大陆版本预计 2027 年推出。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">95</div><div class="bar bar-heat" style="width:95%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--teal)"><span class="rating-stars">★★★★☆</span><span class="rating-text">4/5 推荐</span></div><div class="bar bar-s4" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://www.monsterhunteroutlanders.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          官方网站
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_dayang_shouhu.jpg" alt="大洋守护者" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">大洋守护者</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">大洋守护者</div>
+        <div class="card-tags">
+          <span class="card-tag platform">Android / iOS</span> <span class="card-tag">10/29</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">原创 3D 轻科幻海战策略。战舰、航母、战机对抗深海机甲巨兽，半即时回合制海战 + 舰种克制 + 手动集火，中后期开启百人跨服 SLG 大战场。TapTap 评分 8.1，公测主打「送 1000 抽」福利。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">58</div><div class="bar bar-heat" style="width:58%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/719875" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_chunbai_guiji.jpg" alt="纯白轨迹" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">纯白轨迹</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">纯白轨迹</div>
+        <div class="card-tags">
+          <span class="card-tag platform">Android / iOS</span> <span class="card-tag">10/30</span> <span class="card-tag new">🆕 新上线</span>
+        </div>
+        <div class="card-desc">二次元肉鸽塔防卡牌。化身为守望者在艾瑟拉群岛集结五大种族英雄，靠站位、羁绊与局内肉鸽词条构筑流派抵御魔蚀者。含通天塔、海岛探险、双人协防与跨服公会战，主打轻策略 + 放置收菜。</div>
+        <div class="card-indices"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div><div class="card-index"><div class="label">推荐评级</div><div class="val" style="color:var(--accent)"><span class="rating-stars">★★★☆☆</span><span class="rating-text">3/5 值得关注</span></div><div class="bar bar-s3" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/906293" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 待上线 ===== -->
+<section class="section" id="sec-upcoming">
+  <h2 class="section-title"><span class="icon">⏳</span> 下周及近期 — 待上线 / 预约</h2>
+  <p class="section-sub">11月2日起 · PC/主机 45 款 + 手游 13 款 · 按上线日期与期待度排序 · 全部展开</p>
+
+  <h3 class="sub-title">PC / 主机</h3>
+  <div class="game-grid">
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/wow_forever.jpg" alt="魔兽世界：永恒" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">魔兽世界：永恒</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">World of Warcraft: Forever<span class="cn">（魔兽世界：永恒）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/04</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">暴雪打造的第三条 WoW 产品线：与正式服、怀旧服并行的「永久家园」。设定在《魔兽争霸 III：重制版—被遗忘者王国》之后、熔火之心之前，回到重制后的初始艾泽拉斯，练至 60 级并持续更新剧情。新增 Skyborne 种族与微风岛起始区、露营系统、规则集（Normal / PvP / RP / Hardcore）选择。11 月 4 日全球同步上线，订阅或游戏时间即可进入。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">93</div><div class="bar bar-heat" style="width:93%"></div></div></div>
+        <a class="card-link" href="https://worldofwarcraft.com/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          官方网站
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/zelda_oot.jpg" alt="塞尔达传说：时之笛" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">塞尔达传说：时之笛</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Legend of Zelda: Ocarina of Time<span class="cn">（塞尔达传说：时之笛）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">1998 年的旷世之作以 Switch 2 版本重归。海拉尔平原、时之笛与七年跳转的叙事结构，被公认为 3D 动作冒险的规则制定者。Switch 2 版带来更高分辨率与帧率表现。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">96</div><div class="bar bar-heat" style="width:96%"></div></div></div>
+        <a class="card-link" href="https://www.nintendo.com/us/store/products/the-legend-of-zelda-ocarina-of-time-switch-2/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Nintendo 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/gta6.jpg" alt="Grand Theft Auto VI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Grand Theft Auto VI</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Grand Theft Auto VI</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5 / Xbox Series X|S</span> <span class="card-tag">11/19</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">本年度全球最大发行事件。回到罪恶都市所在的雷奥奈达州，双主角卢西亚与杰森的现代犯罪故事。首发仅登陆 PS5 / XSX，PC 版尚未公布。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">100</div><div class="bar bar-heat" style="width:100%"></div></div></div>
+        <a class="card-link" href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          官方网站
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/ashes_singularity2.jpg" alt="Ashes of the Singularity II" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Ashes of the Singularity II</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Ashes of the Singularity II</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Oxide Games 的超大规模 RTS 续作。操控地球势力、机械化 AI「Substrate」或后人类联盟，在太阳系尺度上争夺星球控制权，支持单人与多人合作 / 对战。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">72</div><div class="bar bar-heat" style="width:72%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3499790/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/warhammer_survivors.jpg" alt="Warhammer Survivors" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Warhammer Survivors</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Warhammer Survivors</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch / Switch 2 / iOS / Android</span> <span class="card-tag">11/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">《战锤 40K：爆矢枪》开发商 Auroch Digital 的暗黑风逆弹幕幸存者类作。超过 40 位来自 40K 与西格玛时代宇宙的角色可选。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">70</div><div class="bar bar-heat" style="width:70%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3669620/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/bengluo.jpg" alt="崩落之国" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">崩落之国</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Where The Seeds Fall<span class="cn">（崩落之国）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Switch 2</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Cygames 旗下 CygamesEdge 的动作冒险新作。地表因污染沦为废土，人类在世界树上建立新国度却面临崩塌。无名士兵邂逅「祸胎」后前往地表，需观察风向并借助花朵作缓冲一路下降。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">68</div><div class="bar bar-heat" style="width:68%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4139580/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/sonic_pico_park.jpg" alt="SONIC PICO PARK" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">SONIC PICO PARK</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">SONIC PICO PARK</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2 / Switch</span> <span class="card-tag">11/12</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">《PICO PARK》系列与世嘉刺猬索尼克的联动新作。融合索尼克速度感的 2–8 人协作动作益智，支持本地与在线联机。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">68</div><div class="bar bar-heat" style="width:68%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4304060/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/shrek2.jpg" alt="怪物史莱克2 重制版" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">怪物史莱克2 重制版</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">DreamWorks Shrek 2 Remastered<span class="cn">（怪物史莱克2 重制版）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2 / Switch</span> <span class="card-tag">11/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Aspyr 重制的 2004 年经典合作动作冒险。史莱克、驴子与靴猫的闹剧式关卡，画面全面升级，支持多人同乐。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">65</div><div class="bar bar-heat" style="width:65%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2523740/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/zero_parades.jpg" alt="归零巡礼：亡谍镇魂曲" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">归零巡礼：亡谍镇魂曲</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Zero Parades: For Dead Spies<span class="cn">（归零巡礼：亡谍镇魂曲）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5</span> <span class="card-tag">11/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">《极乐迪斯科》原班人马（ZA/UM）的谍战 RPG，此前已在 Steam 上好评如潮，本次推出导演剪辑版并登陆 PS5。你是一名才华横溢却备受煎熬的行动员，肩负最后一次绝命任务。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">62</div><div class="bar bar-heat" style="width:62%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2863680/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/theos.jpg" alt="诸神与城邦" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">诸神与城邦</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Theos: Cities of Myth<span class="cn">（诸神与城邦）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/04</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Dotemu 发行的现代城市建造游戏。选择侍奉一位希腊神明并打造繁荣都市，修建圣所、满足民众需求，建一座配得上众神的城市。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">60</div><div class="bar bar-heat" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3002130/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/crymelight.jpg" alt="恸哭幽光" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">恸哭幽光</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">CRYMELIGHT<span class="cn">（恸哭幽光）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Switch 2</span> <span class="card-tag">11/04</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">FURYU 出品的 rogue 动作游戏。以死后世界为舞台，讲述少女们与自身罪孽抗争、为获得自由而战的故事。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">58</div><div class="bar bar-heat" style="width:58%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3891160/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/eternal_sakura.jpg" alt="无尽幻樱阁" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">无尽幻樱阁</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Eternal Palace Sakura<span class="cn">（无尽幻樱阁）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/04</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">樱花飞舞的永恒迷宫 Roguelite 3D 动作。在不断变化的领域中杀出重围，用奖励道具强化自己，挑战高难度内容。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2991310/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/wielders_essence.jpg" alt="Wielders of the Essence" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Wielders of the Essence</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Wielders of the Essence</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Coffee Stain 发行的单人敌潮生存，融入轻度增量式基地建造。每局仅需八分钟，约八小时即可通关。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3546610/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/fleming_manor.jpg" alt="弗莱明庄园命案" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">弗莱明庄园命案</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Death at Fleming Manor<span class="cn">（弗莱明庄园命案）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">法医推理游戏。调查 1959 年英国庄园的神秘死亡事件，探索现场、分析证据并填写死亡证明与急救报告。画风取自 60 年代欧洲侦探漫画。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">52</div><div class="bar bar-heat" style="width:52%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3758950/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/food_devils.jpg" alt="Food Devils" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Food Devils</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Food Devils</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">后启示录世界里最后一位厨师。以猎奇食物吸引冒险者、引导他们与食之恶魔签订契约，并为采集危险食材组织探险。轻肉鸽战术 RPG。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2861730/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/airframe_ultra.jpg" alt="Airframe Ultra" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Airframe Ultra</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Airframe Ultra</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">残酷狂暴的极限巡回地下竞速。西大都会里车手只分赢家与死人，你只有一架拼装飞行器、一把锈砍刀和高速公路上的鲜血。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2522120/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/casualties_unknown.jpg" alt="未知伤亡" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">未知伤亡</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Casualties: Unknown<span class="cn">（未知伤亡）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/09</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">残酷的洞穴探险生存。身为俘虏被派往异星找回丢失货物，需探索全部 11 层洞穴，而你只是成千上万被派来送死的实验体之一。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">52</div><div class="bar bar-heat" style="width:52%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4576490/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/hillthorn.jpg" alt="Hillthorn" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Hillthorn</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Hillthorn</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / Switch</span> <span class="card-tag">11/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Raw Fury 发行的暗黑风调查推理。一桩僻静社区的失踪案、一座埋藏秘密的山、一位和时间赛跑的侦探。全程无对白，靠卡牌、逻辑与直觉探寻真相。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">52</div><div class="bar bar-heat" style="width:52%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3504050/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/australia_did_it.jpg" alt="Australia Did It: End-of-the-World Railway Defense Business" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Australia Did It: End-of-the-World Railway Defense Business</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Australia Did It: End-of-the-World Railway Defense Business</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Rami Ismail 参与的作品，融合回合制塔防与反向弹幕地狱。守护货运列车，部署并合并单位抵御源源不断的敌人，把货物送达。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2396130/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/barbie_rewind.jpg" alt="Barbie™ Rewind" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Barbie™ Rewind</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Barbie™ Rewind</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / PS4 / XSX / XO / Switch 2 / Switch</span> <span class="card-tag">11/12</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Digital Eclipse 与 Atari 合作。穿越数十年时光畅玩经典芭比游戏，并亲手定制芭比梦幻屋。复古合辑 + 装扮玩法。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4082030/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/am_i_nima.jpg" alt="Am I Nima" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Am I Nima</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Am I Nima</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/27</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">心理恐怖游戏：你必须想方设法让母亲相信你确实是她的女儿妮玛。在脑海中组词造句，与母亲交流并赢得她的信任。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3224600/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/wall_world_strategy.jpg" alt="Wall World Strategy" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Wall World Strategy</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Wall World Strategy</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/11</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Alawar 出品的墙世界殖民经营。在无尽之墙表面建立殖民地，管理资源与居民、研发科技、抵御泽雷克进攻，并派机械蜘蛛执行高风险探索。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4218360/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/next_of_kin.jpg" alt="Next of Kin: Epiphany" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Next of Kin: Epiphany</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Next of Kin: Epiphany</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">化身私家侦探丹尼斯·门罗，追捕困扰这座城市二十余年的「顿悟杀手」。线索驱动的侦探推理游戏。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4347370/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/dominus_gladiatus.jpg" alt="Dominus Gladiatus" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Dominus Gladiatus</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Dominus Gladiatus</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">PlayWay 出品的残酷角斗士管理模拟。招募、训练并装备角斗士，在与其他 Dominus 竞争的致命 160 天锦标赛中做出生死抉择。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3572090/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/fat_goblins.jpg" alt="Fat Goblins" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Fat Goblins</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Fat Goblins</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/12</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">16 对 16 团队混战。攻破城墙、救出己方胖公主，用美味的肉喂胖被俘的敌方公主，解锁新帽子与武器。荒诞混乱的 PvP。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2450350/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/moomin.jpg" alt="姆明：疯狂夏日" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">姆明：疯狂夏日</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Moomin: Midsummer Madness<span class="cn">（姆明：疯狂夏日）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / Switch / Switch 2</span> <span class="card-tag">11/12</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">改编自托芙·杨松《姆明谷的疯狂夏日》。姆明、小美和朋友们在大洪水中逃离危机并找出回到姆明谷的路。温馨全龄向冒险。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4463520/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/trees_hate_you.jpg" alt="Trees Hate You" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Trees Hate You</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Trees Hate You</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/16</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">穿过要命的树林，走过一棵又一棵恶意满满的树。它们会耍你、欺负你、伤害你。你要是能有把斧头就好了……</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4171850/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/athelan.jpg" alt="阿瑟兰战场" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">阿瑟兰战场</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Athelan Battlegrounds<span class="cn">（阿瑟兰战场）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/25</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">将玩家技术置于首位的 PvP 回合制战术。复古未来主义竞技场中，与星际英雄并肩挑战来自全宇宙的竞争者。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3572070/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/slotsnstocks.jpg" alt="SlotsNStocks" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">SlotsNStocks</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">SlotsNStocks</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">11/06</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">老虎机构筑 Roguelite。抓取数百个牛 / 熊符号，打造赚钱组合并操纵概率，在不断变化的市场中操纵股价。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4206100/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/dark_alley.jpg" alt="Dark Alley" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Dark Alley</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Dark Alley</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX</span> <span class="card-tag">11 月</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">一名英国侦探在京都失踪。化身贝内特探长，揭开一个远远超越雅库扎的神秘案件。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">45</div><div class="bar bar-heat" style="width:45%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4354830/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/stellar_blade.jpg" alt="剑星（完全版）" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">剑星（完全版）</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Stellar Blade Complete Edition<span class="cn">（剑星（完全版））</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span> <span class="card-tag">11/05</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">SHIFT UP 的后末日动作冒险登陆 Switch 2 并推出完全版，整合已发布的联动内容与 DLC。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">72</div><div class="bar bar-heat" style="width:72%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3489700/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/metaphor.jpg" alt="暗喻幻想：ReFantazio" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">暗喻幻想：ReFantazio</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Metaphor: ReFantazio<span class="cn">（暗喻幻想：ReFantazio）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span> <span class="card-tag">11/12</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">ATLUS 的幻想 RPG 登岸 Switch 2。少年被卷入国王遇刺后突然开始的选举，成为新王候选人，在巡游世界中用各种职业与队伍对抗强敌。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">70</div><div class="bar bar-heat" style="width:70%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2679460/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/gothic3.jpg" alt="哥特王朝3 经典" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">哥特王朝3 经典</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Gothic 3 Classic<span class="cn">（哥特王朝3 经典）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5 / XSX / PS4 / XO</span> <span class="card-tag">11/24</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Piranha Bytes 的经典开放世界 RPG 以「经典版」形态登陆主机。无名英雄在兽人占领的米尔塔纳大陆上成为传奇。原味体验，操作偏硬核。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">48</div><div class="bar bar-heat" style="width:48%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/39500/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/dawnofwar4.jpg" alt="战锤40K：战争黎明4" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">战锤40K：战争黎明4</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Warhammer 40,000: Dawn of War IV<span class="cn">（战锤40K：战争黎明4）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">12/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">KING Art 开发、Deep Silver 发行的 RTS 正统续作，回归系列根源。指挥四种独特阵营（含系列首次登场的机械修会），超过 70 个史诗战役任务，另有背水一战、小规模冲突与多人模式。战锤 RTS 玩家年度必看。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">85</div><div class="bar bar-heat" style="width:85%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2272360/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/mhwilds.jpg" alt="怪物猎人：荒野" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">怪物猎人：荒野</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Monster Hunter Wilds<span class="cn">（怪物猎人：荒野）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch 2</span> <span class="card-tag">12/04</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">卡普空 2025 年旗舰狩猎作登陆 Switch 2。动态变化的原野、进化的狩猎动作与连续不断的沉浸感，掌机端可随时随地出任务。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">80</div><div class="bar bar-heat" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://www.nintendo.com/us/store/products/monster-hunter-wilds-switch-2/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Nintendo 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/rayman_retold.jpg" alt="雷曼：传奇再叙" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">雷曼：传奇再叙</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Rayman Legends Retold<span class="cn">（雷曼：传奇再叙）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2</span> <span class="card-tag">12/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">育碧对备受喜爱的平台动作经典的视觉焕新与剧情重构版。新增神秘领域与音乐关卡，支持最多 4 人游玩。GTA6 之后首个大厂发行。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">78</div><div class="bar bar-heat" style="width:78%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4084710/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/dqm4.jpg" alt="勇者斗恶龙怪物仙境4 枯木国的碧安卡与芙萝拉" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">勇者斗恶龙怪物仙境4 枯木国的碧安卡与芙萝拉</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Dragon Quest Monsters: The Withered World<span class="cn">（勇者斗恶龙怪物仙境4 枯木国的碧安卡与芙萝拉）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PS5 / Switch 2 / Switch</span> <span class="card-tag">12/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Square Enix 的怪物收集 RPG 新作。两位少女碧安卡与芙萝拉成为能与怪物心灵相通的「怪物大师」，展开全新冒险，可培育与配种系列经典怪物。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">75</div><div class="bar bar-heat" style="width:75%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3681610/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/layton.jpg" alt="雷顿教授与蒸汽新世界" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">雷顿教授与蒸汽新世界</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Professor Layton and the New World of Steam<span class="cn">（雷顿教授与蒸汽新世界）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">Switch / Switch 2 / PS5</span> <span class="card-tag">12/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">LEVEL-5 经典解谜系列正统新作。雷顿教授与路克在蒸汽驱动的新世界中展开推理冒险，系列标志性的谜题与绅士气质回归。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">70</div><div class="bar bar-heat" style="width:70%"></div></div></div>
+        <a class="card-link" href="https://www.nintendo.com/en-gb/Games/Nintendo-Switch-games/Professor-Layton-and-the-New-World-of-Steam-2339757.html" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Nintendo 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/guns_eschaton.jpg" alt="末世神枪" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">末世神枪</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Guns of Eschaton<span class="cn">（末世神枪）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX</span> <span class="card-tag">12/08</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">类魂 FPS。传奇美术总监维克多·安东诺夫塑造的末日西部，精打细算每一发子弹，用火药与祷文锻造战斗风格。支持单人或合作。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3734220/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/edge_memories.jpg" alt="Edge of Memories" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">Edge of Memories</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Edge of Memories</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX</span> <span class="card-tag">12/03</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Avaris 的人口正遭受「腐蚀」瘟疫肆虐。扮演年轻游牧者艾琳，与盟友并肩作战拯救世界免于毁灭。Nacon 发行的 JRPG 风动作 RPG。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2738170/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/hela.jpg" alt="鼠鼠奇旅" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">鼠鼠奇旅</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Hela: Of Mice &amp; Magic<span class="cn">（鼠鼠奇旅）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2</span> <span class="card-tag">12/01</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">以一只勇敢小老鼠视角展开的 3D 合作冒险。探索取材于瑞典北部的自然风光、解开谜题，化身传递善意的小小力量。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">65</div><div class="bar bar-heat" style="width:65%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/3161310/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/stage_tour.jpg" alt="STAGE TOUR" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">STAGE TOUR</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">STAGE TOUR</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / XSX / Switch 2</span> <span class="card-tag">12/10</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">RedOctane（吉他英雄原班）打造的音乐节奏游戏。组建乐队、登台巡演，收录 90+ 首授权曲目与 180+ 把 Gibson / Epiphone / Kramer 乐器。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">50</div><div class="bar bar-heat" style="width:50%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/4452700/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/showa_us.jpg" alt="昭和米国物语" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">昭和米国物语</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">Showa American Story<span class="cn">（昭和米国物语）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5</span> <span class="card-tag">2026 年内</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">80 年代末日本买下美国大部分土地的荒诞架空世界。死而复生的少女千草蝶子在既荒诞又熟悉的世界中展开公路冒险，满载复古流行文化梗。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">65</div><div class="bar bar-heat" style="width:65%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/1687540/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/sacrifire.jpg" alt="圣炎祭" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">圣炎祭</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">SacriFire<span class="cn">（圣炎祭）</span></div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC / PS5 / Switch / PS4</span> <span class="card-tag">2026 年内</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">Pixelated Milk 的像素 RPG，配乐由传奇作曲家樱庭统操刀。年轻教士以西结在神魔相争的乱世中面对信仰的考验，战斗系统独树一帜。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">60</div><div class="bar bar-heat" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/1661330/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/bornless.jpg" alt="The Bornless" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">The Bornless</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">The Bornless</div>
+        <div class="card-tags">
+          <span class="card-tag platform">PC</span> <span class="card-tag">2026 年内</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">PvPvE 恐怖战斗王者生存。在神秘世界面对敌对者与魔鬼，使用黑魔法、获取强力武器并制定策略生存下去。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">52</div><div class="bar bar-heat" style="width:52%"></div></div></div>
+        <a class="card-link" href="https://store.steampowered.com/app/2411280/" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          Steam 商店页
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="sub-title">手游 / 移动端</h3>
+  <div class="game-grid">
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/lanse.jpg" alt="蓝色星原：旅谣" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">蓝色星原：旅谣</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">蓝色星原：旅谣</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC / PS5</span> <span class="card-tag">11/26</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">蛮啾网络（《碧蓝航线》原班）的幻想大世界 RPG。在普罗米利亚大陆邂逅可捕捉的幻想生物「奇波」，收集养成、携手战斗、骑乘探索并建设家园，从高空到深海一应俱全。川井宪次与西木康智操刀配乐，全球预约突破 2500 万。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">95</div><div class="bar bar-heat" style="width:95%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/593829" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_yiren_zhixia.jpg" alt="异人之下" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">异人之下</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">异人之下</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC</span> <span class="card-tag">11/04 终局测试 · 12 月上线</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">腾讯魔方工作室群研发、改编自国漫《一人之下》的 3D 中式格斗竞技。主打无属性公平 PVP 与电影化 PVE，招式融合八极拳、金光咒等传统国术，以「普攻—平招—防御」三角克制驱动攻防博弈。全网预约突破 3300 万，11 月 4 日开启终局测试。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">92</div><div class="bar bar-heat" style="width:92%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/730674" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_jikun_huangye.jpg" alt="饥困荒野" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">饥困荒野</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">饥困荒野</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span> <span class="card-tag">11/24</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">腾讯获得 Klei 正版授权、以《饥荒：联机版》为核心玩法开发的沙盒生存手游。随机生成世界，克服饥饿、温度、潮湿与敌人的威胁，与伙伴组队探索、收集、建造与求生。TapTap 预约 243 万，评分 7.5。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">88</div><div class="bar bar-heat" style="width:88%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/194039" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_benghuai_yinyuan.jpg" alt="崩坏：因缘精灵" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">崩坏：因缘精灵</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">崩坏：因缘精灵</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC</span> <span class="card-tag">10/31 保密测试</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">米哈游「崩坏」IP 全新衍生作，把冒险策略与精灵养成结合，主打「从 0 到 1 培养精灵伙伴」。已历经 2025 年 9 月公开测试、今年 2 月长期保密测试与 7 月进化测试，全平台预约突破 456 万。10 月 31 日开启第三期限量删档保密测试。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">85</div><div class="bar bar-heat" style="width:85%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/753921" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_wuxian_da.jpg" alt="无限大" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">无限大</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">无限大</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC</span> <span class="card-tag">2027/01/15</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">网易 Naked Rain 工作室的二次元都市开放世界 RPG。取消传统抽卡机制，角色通过主线流程获得，付费仅限外观与载具。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">80</div><div class="bar bar-heat" style="width:80%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/383874" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_xingbugu.jpg" alt="星布谷地" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">星布谷地</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">星布谷地</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC</span> <span class="card-tag">冬季</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">米哈游的生活模拟新作。「连接测试」已于 10 月 19 日结束，官方称下次游玩即是公测。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">72</div><div class="bar bar-heat" style="width:72%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/776320" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_douluo_zhuxie.jpg" alt="斗罗大陆：诛邪传说" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">斗罗大陆：诛邪传说</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">斗罗大陆：诛邪传说</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC</span> <span class="card-tag">11/19</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">斗罗 IP 正版授权的开放世界 MMO。超 6400 万平方米无缝大地图，可御空飞行、猎杀魂兽吸收魂环，魂印 + 魂环搭配衍生多种战斗流派，含 2v2 斗魂场与 7v7 团战。TapTap 评分 8.4。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">70</div><div class="bar bar-heat" style="width:70%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/716327" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_baiyin.jpg" alt="白银之城" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">白银之城</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">白银之城</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android / PC</span> <span class="card-tag">待定</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">二次元都市题材新作，已开启官方预约，TapTap 期待值保持在预约榜前列。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">70</div><div class="bar bar-heat" style="width:70%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/754910" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_bianxingjingang.jpg" alt="变形金刚：新纪元" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">变形金刚：新纪元</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">变形金刚：新纪元</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span> <span class="card-tag">待定</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">变形金刚正版授权手游，已开启官方预约。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">65</div><div class="bar bar-heat" style="width:65%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/901325" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_huanmeng_wunian.jpg" alt="幻梦无年" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">幻梦无年</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">幻梦无年</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span> <span class="card-tag">11/24</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">虚幻 5 引擎打造的武侠硬核动作手游，水墨国风画面。战斗摒弃传统血条设定，主打精准格挡与闪避时机博弈，含轻功攀越与立体移动探索、多人副本。TapTap 期待值 9.0。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">62</div><div class="bar bar-heat" style="width:62%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/755187" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_jijing_chuidiaozhe.jpg" alt="极境：垂钓者" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">极境：垂钓者</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">极境：垂钓者</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span> <span class="card-tag">待定</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">垂钓题材手游，已开启官方预约。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">60</div><div class="bar bar-heat" style="width:60%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/949370" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_zhenhuan.jpg" alt="甄嬛传" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">甄嬛传</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">甄嬛传</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span> <span class="card-tag">待定</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">经典影视 IP 改编手游，已开启官方预约。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">58</div><div class="bar bar-heat" style="width:58%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/793980" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+    <div class="game-card">
+      <div class="card-img">
+        <img src="covers/m_sanguo_wangdao.jpg" alt="三国志：王道天下" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-img-placeholder" style="display:none">三国志：王道天下</div>
+      </div>
+      <div class="card-body">
+        <div class="card-title">三国志：王道天下</div>
+        <div class="card-tags">
+          <span class="card-tag platform">iOS / Android</span> <span class="card-tag">待定</span> <span class="card-tag ea">⏳ 即将上线</span>
+        </div>
+        <div class="card-desc">三国题材策略手游，已开启官方预约。</div>
+        <div class="card-indices one"><div class="card-index"><div class="label">热度指数</div><div class="val" style="color:var(--accent2)">55</div><div class="bar bar-heat" style="width:55%"></div></div></div>
+        <a class="card-link" href="https://www.taptap.cn/app/824115" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 5h7v7h-2V8.4l-9.3 9.3-1.4-1.4L17.6 7H14V5z"/></svg>
+          TapTap 页面
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOP10 ===== -->
+<section class="section" id="sec-top10">
+  <h2 class="section-title"><span class="icon">🔥</span> 年末最受期待 TOP10</h2>
+  <p class="section-sub">综合预约量、愿望单排名与社区讨论热度 · 仅列热度，暂不评级</p>
+  <div class="top10-grid">
+    <div class="top10-item">
+      <div class="top10-rank">1</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.rockstargames.com/VI" target="_blank" rel="noopener">Grand Theft Auto VI</a></div>
+        <div class="top10-meta">PS5 / XSX · 11/19 · 年度全球最大发行事件，PC 版未公布</div>
+      </div>
+      <div class="top10-heat">100</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">2</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.nintendo.com/us/store/products/the-legend-of-zelda-ocarina-of-time-switch-2/" target="_blank" rel="noopener">塞尔达传说：时之笛（Ocarina of Time）</a></div>
+        <div class="top10-meta">Switch 2 · 11/05 · 3D 动作冒险的规则制定者重归</div>
+      </div>
+      <div class="top10-heat">96</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">3</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.taptap.cn/app/593829" target="_blank" rel="noopener">蓝色星原：旅谣</a></div>
+        <div class="top10-meta">手游 / PC / PS5 · 11/26 · 全球预约 2500 万，蛮啾网络新作</div>
+      </div>
+      <div class="top10-heat">95</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">4</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://worldofwarcraft.com/" target="_blank" rel="noopener">魔兽世界：永恒（WoW: Forever）</a></div>
+        <div class="top10-meta">PC · 11/04 · 暴雪第三条 WoW 产品线，订阅即玩</div>
+      </div>
+      <div class="top10-heat">93</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">5</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.taptap.cn/app/730674" target="_blank" rel="noopener">异人之下</a></div>
+        <div class="top10-meta">手游 / PC · 12 月 · 预约 3300 万，腾讯魔方 3D 国术格斗</div>
+      </div>
+      <div class="top10-heat">92</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">6</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.taptap.cn/app/194039" target="_blank" rel="noopener">饥困荒野</a></div>
+        <div class="top10-meta">手游 · 11/24 · Klei 正版授权，饥荒联机版玩法</div>
+      </div>
+      <div class="top10-heat">88</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">7</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://store.steampowered.com/app/2272360/" target="_blank" rel="noopener">战锤40K：战争黎明4（Dawn of War IV）</a></div>
+        <div class="top10-meta">PC · 12/03 · RTS 正统续作，机械修会首次登场</div>
+      </div>
+      <div class="top10-heat">85</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">8</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.taptap.cn/app/741112" target="_blank" rel="noopener">崩坏：因缘精灵</a></div>
+        <div class="top10-meta">手游 / PC · 测试中 · 米哈游新作，预约 456 万</div>
+      </div>
+      <div class="top10-heat">85</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">9</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://www.nintendo.com/us/store/products/monster-hunter-wilds-switch-2/" target="_blank" rel="noopener">怪物猎人：荒野（Monster Hunter Wilds）</a></div>
+        <div class="top10-meta">Switch 2 · 12/04 · 卡普空旗舰狩猎作登岸掌机</div>
+      </div>
+      <div class="top10-heat">80</div>
+    </div>
+    <div class="top10-item">
+      <div class="top10-rank">10</div>
+      <div class="top10-info">
+        <div class="top10-name"><a href="https://store.steampowered.com/app/4084710/" target="_blank" rel="noopener">雷曼：传奇再叙（Rayman Legends Retold）</a></div>
+        <div class="top10-meta">多平台 · 12/03 · GTA6 之后首个大厂发行</div>
+      </div>
+      <div class="top10-heat">78</div>
+    </div>
+  </div>
+</section>
+
+<footer class="page-footer">
+  <p>每周新游推荐 · 2026年11月2日 · 第19期</p>
+  <p style="margin-top:6px">数据来源：Steam 官方 API / Metacritic / OpenCritic / Game Informer / TapTap / 厂商公告</p>
+  <p style="margin-top:6px"><a href="https://tristanchan2020.github.io/weekly-games/">← 返回往期列表</a></p>
+</footer>
+
+</div>
+
+<button class="back2top" id="back2top" aria-label="回到顶部">↑</button>
+<script>
+const b=document.getElementById('back2top');
+window.addEventListener('scroll',()=>{b.classList.toggle('show',window.scrollY>600)});
+b.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const secs=[...document.querySelectorAll('.section')];
+const links=[...document.querySelectorAll('.nav-links a')];
+window.addEventListener('scroll',()=>{
+  let cur=secs[0];
+  for(const s of secs){if(window.scrollY>=s.offsetTop-90)cur=s;}
+  links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur.id));
+});
+</script>
+</body>
+</html>
